@@ -1,5 +1,5 @@
 # bernabezaldy
-  Official GitHub profile of Zaldy Bernabe — Mechanical Engineer &amp; IMG advocate for financial literacy. Sharing financial literacy concepts and tools as part of IMG’s campaign to educate 30M Filipinos by 2030.  Building projects that empower families toward financial independence. Financial literacy hub | IMG member | Educating Filipinos by 2030. # Welcome! 👋 I'm Zaldy Bernabe  
+  # Welcome! 👋 I'm Zaldy Bernabe  
 
 Member of **International Marketing Group (IMG)** since 2019.  
 
@@ -9,22 +9,20 @@ Member of **International Marketing Group (IMG)** since 2019.
 
 ---
 
-## 🚀 Why I Do This
-- Inspire financial literacy and independence  
-- Guide smart money decisions  
-- Contribute to a financially educated Philippines  
+## 🎯 Mission Driven
+I believe that financial education is the foundation of freedom.  
+Through IMG, I help individuals understand how to **save, invest, and protect their future** — one family at a time.  
+My goal is to inspire Filipinos to take control of their finances and achieve lasting independence.  
 
 ---
 
-## 🛠 Projects
-- 📊 Financial Literacy Dashboard (Excel/GitHub)  
-- 🌐 WordPress IMG Hub  
-- 🎥 Social Media Campaigns  
+## 💼 Professional + Advocacy
+As a **Mechanical Engineer and Financial Educator**, I bring discipline and precision to every project I handle.  
+My advocacy extends beyond engineering — I’m committed to **empowering communities** through financial literacy and sustainable wealth-building.  
+Together, we can create a financially educated Philippines.  
 
 ---
 
-## 📬 Contact
-- 🌐 [My WordPress Site](https://yourdomain.wordpress.com)  
-- 📧 Email: yourname@email.com  
-- 🔗 LinkedIn: linkedin.com/in/yourprofile  
-
+## 🌍 Join the Movement
+Let’s learn, save, invest, and grow with IMG!  
+Visit my website to learn more: https://zaldybernabe.imgcorp.com
