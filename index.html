@@ -7,60 +7,71 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Plus Jakarta Sans', sans-serif; background: #0f172a; color: #f1f5f9; }
-        .glass { background: rgba(30, 41, 59, 0.5); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.1); }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background: #05060a; color: #f1f5f9; }
+        .glass { background: rgba(17, 24, 39, 0.7); backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.08); }
+        .footer-grad { background: radial-gradient(circle at center, rgba(16, 185, 129, 0.1), #05060a); }
     </style>
 </head>
-<body class="py-10 px-5">
+<body class="py-12 px-6">
 
-    <main class="max-w-4xl mx-auto space-y-8">
-        <!-- Hero Section -->
-        <header class="glass p-8 rounded-3xl text-center md:text-left md:flex items-center gap-8">
-            <div class="w-32 h-32 bg-blue-500 rounded-full mx-auto md:mx-0 mb-4 md:mb-0 flex items-center justify-center text-4xl font-bold">ZB</div>
-            <div>
-                <h1 class="text-4xl font-extrabold mb-2 bg-gradient-to-r from-blue-400 to-emerald-400 bg-clip-text text-transparent">Zaldy L. Bernabe, BSME</h1>
-                <p class="text-blue-300 font-semibold text-lg mb-2">Senior Commissioning Engineer | MEP & Project Management</p>
-                <div class="flex flex-wrap gap-2 text-sm text-slate-400">
-                    <span>📍 Ahmadi, Kuwait</span>
-                    <span>•</span>
-                    <a href="mailto:bernabezaldy@gmail.com" class="hover:text-blue-400">bernabezaldy@gmail.com</a>
-                    <span>•</span>
-                    <a href="https://linkedin.com/in/zaldybernabe-me" class="hover:text-blue-400">LinkedIn Profile</a>
+    <main class="max-w-5xl mx-auto space-y-12">
+        
+        <!-- HERO SECTION -->
+        <header class="glass p-10 rounded-[2.5rem] flex flex-col md:flex-row items-center gap-10">
+            <div class="flex-1 space-y-6">
+                <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full glass border-emerald-500/30 text-emerald-400 text-sm font-semibold">
+                    <span class="relative flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span></span>
+                    Available for Strategic Leadership Roles
+                </div>
+                <h1 class="text-5xl md:text-6xl font-extrabold leading-tight">
+                    Engineering <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400">Excellence</span> <br>Beyond 21 Years.
+                </h1>
+                <p class="text-lg text-slate-400 max-w-lg">Zaldy L. Bernabe, BSME. Powering Oil & Gas, HVAC, and MEP operations through precision, reliability, and AI-driven workflows.</p>
+                <div class="flex gap-4">
+                    <a href="mailto:bernabezaldy@gmail.com" class="px-8 py-4 bg-white text-black font-bold rounded-full hover:bg-emerald-400 transition-all">Get In Touch</a>
+                    <a href="https://linkedin.com/in/zaldybernabe-me" class="px-8 py-4 glass text-white font-bold rounded-full hover:border-blue-500 transition-all">LinkedIn</a>
+                </div>
+            </div>
+            <div class="glass p-6 rounded-2xl w-full md:w-80 grid grid-cols-2 gap-4">
+                <div class="p-4 bg-slate-900/50 rounded-xl"><div class="text-2xl font-bold">21+</div><div class="text-[10px] uppercase text-slate-500 tracking-widest">Years Exp</div></div>
+                <div class="p-4 bg-slate-900/50 rounded-xl"><div class="text-2xl font-bold">18+</div><div class="text-[10px] uppercase text-slate-500 tracking-widest">Intl.</div></div>
+                <div class="col-span-2 p-4 bg-emerald-500/10 border border-emerald-500/20 rounded-xl">
+                    <div class="text-lg font-bold text-emerald-400">PMP® Candidate</div>
+                    <div class="text-[10px] uppercase text-emerald-500/70">Strategic Project Mgmt</div>
                 </div>
             </div>
         </header>
 
-        <!-- Summary -->
-        <section class="glass p-8 rounded-3xl">
-            <h2 class="text-2xl font-bold mb-4 text-emerald-400">Professional Summary</h2>
-            <p class="leading-relaxed text-slate-300">21+ years of international engineering excellence across Kuwait, Saudi Arabia, and Iraq. Proven expert in KOC/Aramco standards, MEP commissioning, and material reliability. Currently scaling leadership impact as a PMP® candidate with a focus on AI-assisted project management.</p>
-        </section>
-
-        <!-- Stats Grid -->
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-            <div class="glass p-4 rounded-2xl text-center"><div class="text-2xl font-bold">21+</div><div class="text-xs text-slate-500">Years Exp</div></div>
-            <div class="glass p-4 rounded-2xl text-center"><div class="text-2xl font-bold">18+</div><div class="text-xs text-slate-500">International</div></div>
-            <div class="glass p-4 rounded-2xl text-center"><div class="text-2xl font-bold">KOC</div><div class="text-xs text-slate-500">Specialist</div></div>
-            <div class="glass p-4 rounded-2xl text-center"><div class="text-2xl font-bold">PMP</div><div class="text-xs text-slate-500">Candidate</div></div>
-        </div>
-
-        <!-- Experience Preview -->
-        <section class="space-y-4">
-            <h2 class="text-2xl font-bold text-white">Latest Experience</h2>
-            <div class="glass p-6 rounded-3xl border-l-4 border-emerald-500">
-                <h3 class="font-bold text-lg">Materials / Gas Reliability Technical Support</h3>
-                <p class="text-blue-400 text-sm">Gulf Spic General Trading & Contracting Co. (KOC) | 2023–Present</p>
-                <ul class="list-disc ml-5 mt-2 text-sm text-slate-300 space-y-1">
-                    <li>Directing material approvals and supplier management via SAP/eBEAMS.</li>
-                    <li>Driving CAT ID/ICMR creation for critical reliability compliance.</li>
-                </ul>
+        <!-- EXPERIENCE HIGHLIGHTS -->
+        <section class="glass p-10 rounded-[2.5rem]">
+            <h2 class="text-2xl font-bold mb-8">Career Impact</h2>
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="p-6 rounded-2xl border border-white/5 bg-white/5">
+                    <h3 class="font-bold text-emerald-400">Commissioning Leadership</h3>
+                    <p class="text-sm text-slate-400 mt-2">Delivered end-to-end commissioning for the Lower Fars Heavy Oil Program, coordinating across 23 buildings and 8 disciplines.</p>
+                </div>
+                <div class="p-6 rounded-2xl border border-white/5 bg-white/5">
+                    <h3 class="font-bold text-blue-400">AI & Digital Innovation</h3>
+                    <p class="text-sm text-slate-400 mt-2">Pioneering AI-assisted documentation and Power BI analytics to reduce review prep time and optimize material reliability.</p>
+                </div>
             </div>
         </section>
 
-        <!-- Footer -->
-        <footer class="text-center py-10 border-t border-slate-800">
-            <p class="text-slate-500 text-sm">© 2026 Zaldy L. Bernabe • Built for Project Leadership Excellence</p>
+        <!-- FOOTER: HIGHLY ENGAGING -->
+        <footer class="footer-grad rounded-[2rem] p-12 text-center border border-white/10">
+            <h3 class="text-3xl font-bold mb-6">Let's build the future of MEP operations.</h3>
+            <p class="text-slate-400 mb-8 max-w-md mx-auto">Currently open to senior leadership opportunities in Project Management, Commissioning, and Facilities Operations.</p>
+            
+            <div class="flex justify-center gap-6 mb-8">
+                <a href="mailto:bernabezaldy@gmail.com" class="text-emerald-400 hover:text-white transition">Email</a>
+                <a href="https://linkedin.com/in/zaldybernabe-me" class="text-blue-400 hover:text-white transition">LinkedIn</a>
+                <span class="text-slate-600">|</span>
+                <span class="text-slate-500">+965 55064832</span>
+            </div>
+            
+            <p class="text-xs text-slate-600 uppercase tracking-widest mt-8">© 2026 Zaldy L. Bernabe • Senior Commissioning Engineer</p>
         </footer>
+
     </main>
 </body>
 </html>
