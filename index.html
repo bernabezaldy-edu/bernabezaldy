@@ -2,378 +2,498 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<meta name="description" content="Senior Mechanical Engineer & MEP Commissioning Specialist with 21+ years of experience in Oil & Gas and HVAC projects.">
-<meta name="theme-color" content="#0A1A2C">
-<meta property="og:title" content="Zaldy L. Bernabe | Senior Commissioning & Project Manager">
-<meta property="og:description" content="Professional portfolio and career dossier for Zaldy L. Bernabe.">
-<title>Zaldy L. Bernabe | Senior Commissioning &amp; Project Manager — Oil &amp; Gas, MEP</title>
-
-<!-- Favicon placeholder - replace 'favicon.png' with your image file in the repo -->
-<link rel="icon" type="image/png" href="favicon.png">
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zaldy L. Bernabe | Senior Commissioning & Project Manager - Oil & Gas, MEP</title>
 <style>
-  :root{
-    --ink-deep:#0A1A2C;
-    --ink-panel:#0F2340;
-    --ink-panel-2:#122A4C;
-    --line-blue:#1E3F66;
-    --cyan:#5FE3D3;
-    --amber:#F5A623;
-    --paper:#EAF1F8;
-    --paper-dim:#93A8C2;
-    --font-display:'Space Grotesk', sans-serif;
-    --font-body:'IBM Plex Sans', sans-serif;
-    --font-mono:'IBM Plex Mono', monospace;
-  }
+/* Base Styles */
+body {
+font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+line-height: 1.6;
+color: #333;
+margin: 0;
+padding: 0;
+background: linear-gradient(135deg, #f0f2f5 0%, #e0e5ec 100%); /* Subtle gradient background */
+display: flex;
+justify-content: center;
+align-items: center;
+min-height: 100vh;
+}
+.container {
+max-width: 960px; /* Slightly wider for modern feel */
+margin: 30px auto;
+padding: 40px;
+background-color: #ffffff;
+border-radius: 15px;
+box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Deeper shadow */
+border: 1px solid #e0e0e0;
+animation: fadeIn 1s ease-out; /* Gentle fade-in */
+}
 
-  *{ box-sizing:border-box; }
-  html{ scroll-behavior:smooth; }
-  body{
-    margin:0;
-    font-family:var(--font-body);
-    color:var(--paper);
-    background-color:var(--ink-deep);
-    background-image:
-      linear-gradient(var(--line-blue) 1px, transparent 1px),
-      linear-gradient(90deg, var(--line-blue) 1px, transparent 1px);
-    background-size: 34px 34px;
-    background-attachment: fixed;
-    -webkit-font-smoothing:antialiased;
-    line-height:1.6;
-  }
+/* Keyframe Animation */
+@keyframes fadeIn {
+from { opacity: 0; transform: translateY(20px); }
+to { opacity: 1; transform: translateY(0); }
+}
 
-  @media (prefers-reduced-motion: reduce){
-    html{ scroll-behavior:auto; }
-    *{ animation:none !important; transition:none !important; }
-  }
+/* Typography */
+h1 {
+color: #004080; /* Darker, authoritative blue */
+text-align: center;
+margin-bottom: 10px;
+font-size: 3.5em; /* Larger, more impactful */
+letter-spacing: -1px;
+line-height: 1.1;
+}
+h2 {
+color: #0056b3;
+text-align: center;
+margin-top: 0;
+margin-bottom: 35px; /* More space */
+font-size: 1.8em;
+font-weight: 400;
+line-height: 1.3;
+}
+h3 {
+color: #28a745; /* Green for section titles */
+border-bottom: 3px solid #28a745; /* Thicker border */
+padding-bottom: 12px;
+margin-top: 50px; /* More top margin */
+margin-bottom: 25px;
+font-size: 1.6em;
+font-weight: 700;
+position: relative;
+}
+h3::before { /* Decorative element for h3 */
+content: '';
+position: absolute;
+left: 0;
+bottom: -3px;
+width: 30px;
+height: 3px;
+background-color: #007bff; /* Secondary color for accent */
+}
+p {
+margin-bottom: 18px;
+font-size: 1.1em;
+line-height: 1.7;
+}
+strong {
+color: #000;
+}
 
-  a{ color:inherit; }
+/* Contact & CTA */
+.contact-info {
+text-align: center;
+margin-bottom: 30px;
+font-size: 1.15em;
+color: #555;
+}
+.contact-info a {
+color: #007bff;
+text-decoration: none;
+margin: 0 12px;
+transition: color 0.3s ease;
+font-weight: 500;
+}
+.contact-info a:hover {
+color: #0056b3;
+text-decoration: underline;
+}
+.cta-button-wrapper {
+text-align: center;
+margin-top: 40px;
+margin-bottom: 40px;
+}
+.btn-primary {
+display: inline-block;
+background: linear-gradient(45deg, #007bff, #0056b3); /* Gradient button */
+color: #ffffff;
+padding: 15px 35px; /* Larger padding */
+border-radius: 10px; /* Softer edges */
+text-decoration: none;
+font-size: 1.3em; /* Larger text */
+font-weight: 700;
+transition: all 0.3s ease;
+box-shadow: 0 6px 15px rgba(0, 123, 255, 0.3);
+border: none;
+cursor: pointer;
+}
+.btn-primary:hover {
+background: linear-gradient(45deg, #0056b3, #004080);
+transform: translateY(-3px) scale(1.02); /* Lift and slightly grow */
+box-shadow: 0 8px 20px rgba(0, 123, 255, 0.4);
+}
 
-  .wrap{
-    max-width:920px;
-    margin:0 auto;
-    padding: clamp(16px, 4vw, 40px);
-  }
+/* Skills Grid */
+.skills-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+gap: 25px; /* More space */
+margin-top: 25px;
+}
+.skill-category {
+background-color: #f8faff; /* Very light blue */
+padding: 22px; /* More padding */
+border-radius: 12px;
+border: 1px solid #cceeff;
+box-shadow: 0 4px 12px rgba(0, 123, 255, 0.08); /* Subtle shadow */
+transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.skill-category:hover {
+transform: translateY(-5px); /* Lift on hover */
+box-shadow: 0 8px 20px rgba(0, 123, 255, 0.12);
+}
+.skill-category h4 {
+color: #007bff;
+margin-top: 0;
+margin-bottom: 18px;
+font-size: 1.25em;
+display: flex;
+align-items: center;
+font-weight: 600;
+}
+.skill-category h4 span {
+margin-right: 12px;
+font-size: 1.5em; /* Larger icon */
+line-height: 1;
+}
+.skill-category ul {
+list-style-type: none;
+padding: 0;
+margin: 0;
+}
+.skill-category ul li {
+margin-bottom: 10px;
+display: flex;
+align-items: flex-start; /* Align icon at top */
+font-size: 1.05em;
+}
+.skill-category ul li::before {
+content: '✅';
+margin-right: 10px;
+font-size: 0.95em;
+flex-shrink: 0; /* Prevent icon from shrinking */
+margin-top: 2px; /* Slight vertical adjust */
+}
 
-  .sheet{
-    position:relative;
-    background:linear-gradient(180deg, var(--ink-panel) 0%, var(--ink-panel-2) 100%);
-    border:1px solid var(--line-blue);
-    border-radius:4px;
-    padding: clamp(22px, 5vw, 56px);
-    box-shadow: 0 30px 80px rgba(0,0,0,0.45);
-    opacity:0;
-    animation: rise 0.7s ease-out forwards;
-  }
-  @keyframes rise{ from{opacity:0; transform:translateY(14px);} to{opacity:1; transform:translateY(0);} }
+/* Experience Section */
+.experience-item {
+background-color: #ffffff;
+border: 1px solid #eee;
+border-left: 6px solid #007bff; /* Thicker left border */
+padding: 25px; /* More padding */
+margin-bottom: 30px;
+border-radius: 10px;
+box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); /* Softer shadow */
+transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.experience-item:hover {
+transform: translateX(5px); /* Slide slightly on hover */
+box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+.experience-item h4 {
+color: #007bff;
+margin-top: 0;
+margin-bottom: 8px;
+font-size: 1.35em;
+}
+.experience-item .role {
+font-style: italic;
+color: #555;
+margin-bottom: 10px;
+font-size: 1.15em;
+font-weight: 500;
+}
+.experience-item .duration {
+font-size: 1em;
+color: #777;
+margin-bottom: 18px;
+display: block;
+border-bottom: 1px dashed #eee; /* Subtle separator */
+padding-bottom: 10px;
+}
+.experience-item ul {
+list-style-type: disc;
+margin-left: 25px;
+padding: 0;
+}
+.experience-item ul li {
+margin-bottom: 8px;
+font-size: 1.05em;
+}
 
-  .sheet::before, .sheet::after{
-    content:'';
-    position:absolute;
-    width:16px; height:16px;
-    border-color: var(--cyan);
-    opacity:0.7;
-  }
-  .sheet::before{ top:10px; left:10px; border-top:2px solid var(--cyan); border-left:2px solid var(--cyan); }
-  .sheet::after{ bottom:10px; right:10px; border-bottom:2px solid var(--cyan); border-right:2px solid var(--cyan); }
+/* Achievements & Education */
+.achievements-list, .education-list, .memberships-list {
+list-style-type: none;
+padding: 0;
+margin-top: 20px;
+}
+.achievements-list li, .education-list li, .memberships-list li {
+background-color: #e6f7ea; /* Light green for lists */
+border-left: 5px solid #28a745; /* Thicker border */
+padding: 15px 20px;
+margin-bottom: 12px;
+border-radius: 8px;
+font-size: 1.1em;
+display: flex;
+align-items: flex-start;
+box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+.achievements-list li::before {
+content: '🌟'; /* More vibrant star */
+margin-right: 12px;
+font-size: 1.2em;
+flex-shrink: 0;
+margin-top: 2px;
+}
+.education-list li {
+background-color: #f0f8ff; /* Light blue for education */
+border-left-color: #007bff;
+}
+.education-list li::before {
+content: '🎓';
+margin-right: 12px;
+font-size: 1.2em;
+flex-shrink: 0;
+margin-top: 2px;
+}
+.memberships-list li {
+background-color: #fffaf0; /* Light yellow for memberships */
+border-left-color: #ffc107;
+}
+.memberships-list li::before {
+content: '🤝';
+margin-right: 12px;
+font-size: 1.2em;
+flex-shrink: 0;
+margin-top: 2px;
+}
+.highlight {
+font-weight: bold;
+color: #007bff;
+}
 
-  .eyebrow{
-    font-family:var(--font-mono);
-    font-size:0.72rem;
-    letter-spacing:0.18em;
-    text-transform:uppercase;
-    color:var(--cyan);
-    display:flex;
-    align-items:center;
-    gap:10px;
-    margin-bottom:14px;
-  }
-  .eyebrow::before{
-    content:'';
-    width:22px; height:1px;
-    background:var(--cyan);
-    display:inline-block;
-  }
+/* Footer */
+.footer {
+text-align: center;
+margin-top: 60px;
+padding-top: 30px;
+border-top: 1px solid #e0e0e0;
+color: #777;
+font-size: 0.95em;
+}
+.footer p {
+margin-bottom: 10px;
+}
+.footer a {
+color: #007bff;
+text-decoration: none;
+font-weight: 500;
+transition: color 0.3s ease;
+}
+.footer a:hover {
+color: #0056b3;
+text-decoration: underline;
+}
 
-  .hero h1{
-    font-family:var(--font-display);
-    font-weight:700;
-    font-size:clamp(1.9rem, 6vw, 3.1rem);
-    line-height:1.08;
-    margin:0 0 8px;
-    color:var(--paper);
-    letter-spacing:-0.01em;
-  }
-  .hero .role{
-    font-family:var(--font-body);
-    font-weight:500;
-    font-size:clamp(1rem, 2.6vw, 1.25rem);
-    color:var(--paper-dim);
-    margin:0 0 28px;
-    max-width:60ch;
-  }
-
-  .title-block{
-    border:1px solid var(--line-blue);
-    border-radius:4px;
-    overflow:hidden;
-    font-family:var(--font-mono);
-    font-size:0.85rem;
-    display:grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  }
-  .title-block div{
-    padding:12px 16px;
-    border-right:1px solid var(--line-blue);
-    border-top:1px solid var(--line-blue);
-  }
-  .title-block div:nth-child(-n+3){ border-top:none; }
-  .title-block div:last-child, .title-block div:nth-child(3n){ border-right:none; }
-  .title-block .k{
-    display:block;
-    color:var(--cyan);
-    font-size:0.68rem;
-    letter-spacing:0.1em;
-    text-transform:uppercase;
-    margin-bottom:4px;
-  }
-  .title-block a:hover{ color:var(--amber); }
-
-  .cta-row{
-    margin-top:28px;
-    display:flex;
-    flex-wrap:wrap;
-    gap:14px;
-  }
-  .btn{
-    font-family:var(--font-mono);
-    font-size:0.85rem;
-    letter-spacing:0.06em;
-    text-transform:uppercase;
-    text-decoration:none;
-    display:inline-flex;
-    align-items:center;
-    gap:10px;
-    padding:13px 22px;
-    border-radius:3px;
-    border:1px solid var(--amber);
-    color:var(--amber);
-    transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
-  }
-  .btn:hover{
-    background:var(--amber);
-    color:var(--ink-deep);
-    transform:translateY(-2px);
-  }
-  .btn.ghost{
-    border-color:var(--line-blue);
-    color:var(--paper-dim);
-  }
-  .btn.ghost:hover{
-    background:transparent;
-    border-color:var(--cyan);
-    color:var(--cyan);
-    transform:translateY(-2px);
-  }
-
-  section{
-    margin-top: clamp(34px, 6vw, 56px);
-    opacity:0;
-    transform:translateY(16px);
-    transition: opacity 0.6s ease, transform 0.6s ease;
-  }
-  section.in-view{ opacity:1; transform:translateY(0); }
-
-  .sec-head{
-    display:flex;
-    align-items:baseline;
-    gap:14px;
-    margin-bottom:22px;
-    border-bottom:1px solid var(--line-blue);
-    padding-bottom:12px;
-  }
-  .sec-head .num{
-    font-family:var(--font-mono);
-    color:var(--cyan);
-    font-size:0.85rem;
-  }
-  .sec-head h2{
-    font-family:var(--font-display);
-    font-weight:600;
-    font-size:clamp(1.15rem, 3vw, 1.5rem);
-    margin:0;
-    color:var(--paper);
-  }
-
-  p{ font-size:1rem; color:var(--paper); margin:0 0 16px; }
-  p.lead{ color:var(--paper-dim); }
-  strong{ color:var(--cyan); font-weight:600; }
-
-  .skills-grid{
-    display:grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap:14px;
-  }
-  .skill-card{
-    background:rgba(95,227,211,0.03);
-    border:1px solid var(--line-blue);
-    border-radius:4px;
-    padding:18px;
-    transition: border-color 0.2s ease, transform 0.2s ease;
-  }
-  .skill-card:hover{ border-color:var(--cyan); transform:translateY(-3px); }
-  .skill-card h3{
-    font-family:var(--font-mono);
-    font-size:0.78rem;
-    letter-spacing:0.08em;
-    text-transform:uppercase;
-    color:var(--amber);
-    margin:0 0 12px;
-  }
-  .skill-card ul{ list-style:none; margin:0; padding:0; }
-  .skill-card li{
-    font-size:0.94rem;
-    color:var(--paper);
-    padding-left:16px;
-    position:relative;
-    margin-bottom:8px;
-  }
-  .skill-card li::before{
-    content:'—';
-    position:absolute; left:0; color:var(--cyan);
-  }
-
-  .field-notes{ list-style:none; margin:0; padding:0; display:grid; gap:10px; }
-  .field-notes li{
-    font-family:var(--font-body);
-    font-size:0.98rem;
-    background:rgba(245,166,35,0.05);
-    border-left:3px solid var(--amber);
-    padding:14px 16px;
-    border-radius:0 4px 4px 0;
-  }
-
-  .timeline{ position:relative; padding-left:26px; }
-  .timeline::before{
-    content:'';
-    position:absolute; left:6px; top:6px; bottom:6px;
-    width:1px;
-    background:var(--line-blue);
-  }
-  .tl-item{ position:relative; padding-bottom:32px; }
-  .tl-item::before{
-    content:'';
-    position:absolute; left:-26px; top:5px;
-    width:11px; height:11px;
-    border-radius:50%;
-    background:var(--ink-panel);
-    border:2px solid var(--cyan);
-  }
-  .tl-item .duration{
-    font-family:var(--font-mono);
-    font-size:0.78rem;
-    color:var(--cyan);
-    letter-spacing:0.05em;
-    display:block;
-    margin-bottom:6px;
-  }
-  .tl-item h3{ font-family:var(--font-display); font-size:1.1rem; color:var(--paper); margin:0 0 2px; }
-  .tl-item .org{ font-size:0.92rem; color:var(--paper-dim); font-style:italic; margin-bottom:10px; }
-  .tl-item ul{ margin:0; padding-left:20px; }
-
-  .simple-list{ list-style:none; margin:0; padding:0; display:grid; gap:10px; }
-  .simple-list li{
-    font-size:0.96rem;
-    border:1px solid var(--line-blue);
-    border-radius:4px;
-    padding:12px 16px;
-    display:flex;
-    gap:10px;
-  }
-  .simple-list li .tag{
-    font-family:var(--font-mono);
-    font-size:0.68rem;
-    color:var(--ink-deep);
-    background:var(--cyan);
-    padding:2px 6px;
-    border-radius:3px;
-    height:fit-content;
-    letter-spacing:0.05em;
-    flex-shrink:0;
-  }
-  .simple-list li.mem .tag{ background:var(--amber); }
-
-  footer{ margin-top:56px; border-top:1px solid var(--line-blue); padding-top:26px; text-align:center; }
-  footer p.cta-line{ font-family:var(--font-display); font-size:clamp(1.05rem, 3vw, 1.3rem); color:var(--paper); max-width:60ch; margin:0 auto 18px; }
-  footer .links a{ text-decoration:none; color:var(--cyan); margin:0 8px; font-family:var(--font-mono); font-size:0.85rem; }
-  footer .links a:hover{ color:var(--amber); }
-  footer .fine{ font-family:var(--font-mono); font-size:0.7rem; color:var(--paper-dim); letter-spacing:0.05em; margin-top:22px; }
-
-  @media (max-width:520px){
-    .title-block{ grid-template-columns:1fr; }
-    .title-block div{ border-right:none !important; }
-    .title-block div:nth-child(n){ border-top:1px solid var(--line-blue); }
-    .title-block div:first-child{ border-top:none; }
-  }
+/* Responsive adjustments */
+@media (max-width: 768px) {
+.container {
+margin: 20px;
+padding: 25px;
+}
+h1 {
+font-size: 2.5em;
+}
+h2 {
+font-size: 1.4em;
+margin-bottom: 25px;
+}
+h3 {
+font-size: 1.3em;
+margin-top: 40px;
+margin-bottom: 20px;
+}
+.btn-primary {
+padding: 12px 25px;
+font-size: 1.1em;
+}
+.skills-grid {
+grid-template-columns: 1fr; /* Stack skills on small screens */
+}
+.contact-info {
+font-size: 1em;
+}
+.contact-info a {
+display: block;
+margin: 8px 0;
+}
+}
 </style>
 </head>
 <body>
-<div class="wrap">
-  <div class="sheet">
-    <div class="hero">
-      <div class="eyebrow">Professional Dossier · Rev 2026</div>
-      <h1>Zaldy L. Bernabe, BSME</h1>
-      <p class="role">Leading Project &amp; Commissioning Manager roles · 21+ years across Oil &amp; Gas, HVAC and MEP · KOC &amp; ARAMCO projects · PMP® Candidate</p>
-      <div class="title-block">
-        <div><span class="k">Location</span>Ahmadi, Kuwait</div>
-        <div><span class="k">Phone</span><a href="tel:+96555064832">+965 55064832</a></div>
-        <div><span class="k">Email</span><a href="mailto:bernabezaldy@gmail.com">bernabezaldy@gmail.com</a></div>
-      </div>
-      <div class="cta-row">
-        <a href="https://linkedin.com/in/zaldybernabe-me" target="_blank" class="btn">Connect on LinkedIn →</a>
-        <a href="mailto:bernabezaldy@gmail.com" class="btn ghost">Email Zaldy</a>
-      </div>
-    </div>
+<div class="container">
 
-    <section id="summary">
-      <div class="sec-head"><span class="num">01</span><h2>Professional Summary</h2></div>
-      <p class="lead">A highly seasoned <strong>Senior Mechanical Engineer &amp; MEP Commissioning Specialist</strong> with over <strong>21 years of global engineering experience</strong>, including 18+ years internationally across Kuwait, Saudi Arabia, and Iraq. I excel in delivering complex projects for <strong>Kuwait Oil Company (KOC)</strong> and major EPC contractors.</p>
-    </section>
-
-    <section id="skills">
-      <div class="sec-head"><span class="num">02</span><h2>Core Skills</h2></div>
-      <div class="skills-grid">
-        <div class="skill-card"><h3>Project Mgmt</h3><ul><li>MEP Coordination</li><li>Primavera P6/MS Project</li></ul></div>
-        <div class="skill-card"><h3>HVAC &amp; Comm</h3><ul><li>System Integration</li><li>Pre-Commissioning &amp; TAB</li></ul></div>
-        <div class="skill-card"><h3>QA/QC &amp; Standards</h3><ul><li>KOC/Aramco Compliant</li><li>ISO, ASME, NFPA</li></ul></div>
-      </div>
-    </section>
-
-    <!-- ... (Continue adding sections as per your original code) ... -->
-
-    <footer>
-      <p class="cta-line">Ready to elevate your next project? Let's discuss.</p>
-      <div class="links">
-        <a href="https://linkedin.com/in/zaldybernabe-me" target="_blank">linkedin.com/in/zaldybernabe-me</a>
-      </div>
-      <p class="fine">References available upon request.</p>
-    </footer>
-  </div>
+<!-- HEADER / HERO SECTION -->
+<h1>Zaldy L. Bernabe, BSME</h1>
+<h2>🚀 Leading Project & Commissioning Manager Roles | 21+ Yrs Oil & Gas · HVAC · MEP Professional</h2>
+<p class="contact-info">
+<span style="font-weight: bold; color: #004080;">KOC & ARAMCO Projects Expertise · PMP® Candidate</span>
+<br>
+Ahmadi, Kuwait | <a href="tel:+96555064832">+965 55064832</a> | <a href="mailto:bernabezaldy@gmail.com">bernabezaldy@gmail.com</a>
+</p>
+<div class="cta-button-wrapper">
+<a href="https://linkedin.com/in/zaldybernabe-me" target="_blank" class="btn-primary">Connect with Zaldy on LinkedIn</a>
 </div>
 
-<script>
-  if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches && 'IntersectionObserver' in window) {
-    const io = new IntersectionObserver((entries) => {
-      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in-view'); io.unobserve(e.target); } });
-    }, { threshold: 0.12 });
-    document.querySelectorAll('section').forEach(s => io.observe(s));
-  } else {
-    document.querySelectorAll('section').forEach(s => s.classList.add('in-view'));
-  }
-</script>
+<!-- PROFESSIONAL SUMMARY -->
+<h3>🎯 Professional Summary: Engineering Leadership & Impact</h3>
+<p>
+A highly seasoned <strong>Senior Mechanical Engineer & MEP Commissioning Specialist</strong> with over <strong>21 years of global engineering experience</strong>, including 18+ years internationally across Kuwait, Saudi Arabia, and Iraq. I excel in delivering complex projects for <strong>Kuwait Oil Company (KOC)</strong> and major EPC contractors, with deep expertise in HVAC systems, commissioning, QA/QC, project controls, and materials reliability.
+</p>
+<p>
+My track record spans pre-commissioning, TAB, handover documentation, and meticulous multidisciplinary site coordination, all aligned with stringent international and KOC standards. I thrive in demanding, multicultural, and safety-critical environments. Currently advancing with <strong>PMP® certification</strong>, I am poised to spearhead senior leadership roles in project management, commissioning, and facilities operations, driving efficiency and excellence.
+</p>
+
+<!-- CORE SKILLS & TECHNICAL EXPERTISE -->
+<h3>🛠️ Core Skills & Technical Expertise: Your Blueprint for Success</h3>
+<div class="skills-grid">
+<div class="skill-category">
+<h4><span>⚙️</span> Project & Construction Management</h4>
+<ul>
+<li>MEP Coordination (HVAC, Plumbing, Firefighting, Electrical)</li>
+<li>Primavera P6, MS Project, Advanced Scheduling</li>
+<li>Cost Control, Oil & Gas Facility Expertise</li>
+</ul>
+</div>
+<div class="skill-category">
+<h4><span>🌬️</span> HVAC & Commissioning Excellence</h4>
+<ul>
+<li>HVAC Design & Chiller Plant Optimization</li>
+<li>Equipment Selection & System Integration</li>
+<li>Pre-Commissioning, TAB, Performance Troubleshooting</li>
+</ul>
+</div>
+<div class="skill-category">
+<h4><span>💡</span> Controls & Automation</h4>
+<ul>
+<li>BMS & PLC Troubleshooting Expertise</li>
+<li>Seamless System Integration</li>
+</ul>
+</div>
+<div class="skill-category">
+<h4><span>📦</span> Procurement & Materials Reliability</h4>
+<ul>
+<li>SAP, eBEAMS, Strategic Vendor Management</li>
+<li>Technical Evaluation & Material Submittals</li>
+<li>Logistics & Supply Chain Coordination</li>
+</ul>
+</div>
+<div class="skill-category">
+<h4><span>✔️</span> QA/QC & Regulatory Compliance</h4>
+<ul>
+<li>Comprehensive Inspection & Documentation</li>
+<li>Reliability Engineering, Maintenance Readiness</li>
+<li>ISO, ASME, ASTM, NFPA, KOC & Aramco Standards</li>
+</ul>
+</div>
+<div class="skill-category">
+<h4><span>💻</span> Digital Tools & Innovation</h4>
+<ul>
+<li>AutoCAD 2D/3D Proficiency</li>
+<li>Power BI for Data Visualization</li>
+<li>AI-Assisted Documentation & Analysis</li>
+</ul>
+</div>
+</div>
+
+<!-- SELECTED CAREER ACHIEVEMENTS -->
+<h3>🏆 Selected Career Achievements: Driving Impact & Innovation</h3>
+<ul class="achievements-list">
+<li>Spearheaded full MEP commissioning and successful handover for the critical <span class="highlight">KOC Lower Fars Heavy Oil Program</span>.</li>
+<li>Key contributor to multidiscipline EPC delivery of a major Heavy Oil Development project, encompassing <strong>23 buildings and 8 disciplines</strong>.</li>
+<li>Achieved a significant <strong>15% cost reduction</strong> through an expertly executed, consultant-approved ductwork redesign.</li>
+<li>Leveraged digital and AI tools to optimize workflows, resulting in reduced document review preparation time.</li>
+<li>Recipient of the <span class="highlight">Most Productive Accomplishment</span> and <span class="highlight">Honorable Service Award</span>, recognizing technical excellence and dedication.</li>
+</ul>
+
+<!-- PROFESSIONAL EXPERIENCE -->
+<h3>💼 Professional Experience: A Legacy of Leadership & Delivery</h3>
+
+<div class="experience-item">
+<h4>Materials / Gas Reliability Technical Support</h4>
+<div class="role">Gulf Spic General Trading & Contracting Co. (supporting KOC)</div>
+<div class="duration">Ahmadi, Kuwait | 2023 – Present</div>
+<ul>
+<li>Coordinates crucial material approvals, RFQs, and supplier management utilizing SAP/eBEAMS.</li>
+<li>Drives reliability initiatives including CAT ID/ICMR creation and rigorous compliance verification.</li>
+<li>Conducts in-depth technical standard analysis to inform critical engineering decisions and optimize processes.</li>
+</ul>
+</div>
+
+<div class="experience-item">
+<h4>Supervisor – Building Maintenance & HVAC</h4>
+<div class="role">AlSaif Company | Heavy Oil Project Support Complex – KOC South Ratqa</div>
+<div class="duration">Kuwait | 2021 – 2022</div>
+<ul>
+<li>Led multidisciplinary maintenance operations for HVAC, plumbing, firefighting, and electrical systems, ensuring peak performance.</li>
+<li>Optimized HVAC system performance and provided expert support for complex PLC troubleshooting.</li>
+</ul>
+</div>
+
+<div class="experience-item">
+<h4>MEP Commissioning Engineer</h4>
+<div class="role">Consolidated Contractors International Company (CCC) | Lower Fars Heavy Oil Program – KOC</div>
+<div class="duration">Kuwait | 2019 – 2021</div>
+<ul>
+<li>Directed all phases of pre-commissioning and commissioning for HVAC/MEP systems.</li>
+<li>Delivered essential TAB, reliability testing, redline, and as-built documentation, ensuring smooth project handover.</li>
+<li>Expertly coordinated across diverse disciplines and contractors for a major Heavy Oil Development project (23 buildings).</li>
+</ul>
+</div>
+
+<div class="experience-item">
+<h4>Earlier Roles: Diverse Expertise & Foundational Growth</h4>
+<div class="role">MEP Engineer · QA/QC Engineer · Planning Engineer · HVAC Designer</div>
+<div class="duration">Saudi Arabia, Iraq, Philippines | 2005 – 2018</div>
+<ul>
+<li>Successfully executed diverse MEP projects across sectors including universities, oilfields, and cultural centers.</li>
+<li>Provided comprehensive QA/QC, commissioning, and innovative HVAC design solutions.</li>
+<li>Cultivated a strong technical foundation and multidisciplinary expertise across varied regions.</li>
+</ul>
+</div>
+
+<!-- EDUCATION & CERTIFICATIONS -->
+<h3>🎓 Education & Professional Advancement</h3>
+<ul class="education-list">
+<li><strong>BS Mechanical Engineering</strong> — Don Honorio Ventura Technological State University (2005)</li>
+<li><span class="highlight"><strong>PMP® Certification — In Progress</strong></span> (Project Management Professional)</li>
+<li>PMI Planning & Scheduling Professional</li>
+<li>Professional Certificate — AI Tools & Workflow Innovation (Coursiv)</li>
+<li>UNODC Anti-Corruption Certification | BLS/CPR Certification</li>
+</ul>
+
+<!-- PROFESSIONAL MEMBERSHIPS -->
+<h3>🤝 Professional Memberships & Community Leadership</h3>
+<ul class="memberships-list">
+<li><strong>Board Director</strong>, Philippine Society of Mechanical Engineers (PSME) Kuwait Chapter (2023–2026)</li>
+<li>Member, Saudi Council of Engineers</li>
+</ul>
+
+<!-- FINAL CALL TO ACTION / FOOTER -->
+<div class="footer">
+<p style="font-size: 1.15em; font-weight: bold; color: #004080;">
+Ready to elevate your next project? Let's discuss how my 21+ years of expertise in MEP, HVAC, and Oil & Gas commissioning can drive your success.
+</p>
+<p>
+Connect with me directly:<br>
+<a href="https://linkedin.com/in/zaldybernabe-me" target="_blank">linkedin.com/in/zaldybernabe-me</a> | <a href="mailto:bernabezaldy@gmail.com">bernabezaldy@gmail.com</a>
+</p>
+<p style="font-size: 0.85em; color: #a0a0a0; margin-top: 20px;">
+References available upon request.
+</p>
+</div>
+
+</div>
 </body>
 </html>
