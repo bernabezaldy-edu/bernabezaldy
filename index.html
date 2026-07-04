@@ -4,50 +4,63 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zaldy L. Bernabe | Senior Commissioning Engineer</title>
-    <!-- Add FontAwesome or similar for icons in the future -->
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
     <style>
-        /* [Keep your existing CSS variables and base styles here] */
-        /* ADD THIS FOR THE FOOTER */
-        .footer {
-            background: var(--bg2);
-            padding: 4rem 1.5rem;
-            border-top: 1px solid var(--border);
-            text-align: center;
-        }
-        .footer-content { max-width: 800px; margin: 0 auto; }
-        .footer-links { display: flex; justify-content: center; gap: 2rem; margin: 2rem 0; }
-        .footer-links a { color: var(--muted); text-decoration: none; transition: .3s; }
-        .footer-links a:hover { color: var(--accent); }
-        .copyright { color: var(--muted); font-size: 0.8rem; }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background: #0f172a; color: #f1f5f9; }
+        .glass { background: rgba(30, 41, 59, 0.5); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.1); }
     </style>
 </head>
-<body>
-    <!-- [Keep your existing Hero, Skills, and Timeline sections] -->
-    
-    <!-- ADD THIS FOOTER SECTION -->
-    <footer class="footer">
-        <div class="footer-content">
-            <h2 class="font-head" style="margin-bottom: 1rem;">Let's work together.</h2>
-            <p style="color: var(--muted); margin-bottom: 2rem;">Ready to bring precision and efficiency to your next project? Reach out.</p>
-            
-            <a href="mailto:your-email@example.com" class="btn btn-primary">Get In Touch</a>
-            
-            <div class="footer-links">
-                <a href="#">LinkedIn</a>
-                <a href="#">GitHub</a>
-                <a href="#">Portfolio</a>
-            </div>
-            <p class="copyright">© 2026 Zaldy L. Bernabe. All rights reserved.</p>
-        </div>
-    </footer>
+<body class="py-10 px-5">
 
-    <script>
-        // Simple Intersection Observer to reveal elements
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => { if(entry.isIntersecting) entry.target.classList.add('show'); });
-        });
-        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-    </script>
+    <main class="max-w-4xl mx-auto space-y-8">
+        <!-- Hero Section -->
+        <header class="glass p-8 rounded-3xl text-center md:text-left md:flex items-center gap-8">
+            <div class="w-32 h-32 bg-blue-500 rounded-full mx-auto md:mx-0 mb-4 md:mb-0 flex items-center justify-center text-4xl font-bold">ZB</div>
+            <div>
+                <h1 class="text-4xl font-extrabold mb-2 bg-gradient-to-r from-blue-400 to-emerald-400 bg-clip-text text-transparent">Zaldy L. Bernabe, BSME</h1>
+                <p class="text-blue-300 font-semibold text-lg mb-2">Senior Commissioning Engineer | MEP & Project Management</p>
+                <div class="flex flex-wrap gap-2 text-sm text-slate-400">
+                    <span>📍 Ahmadi, Kuwait</span>
+                    <span>•</span>
+                    <a href="mailto:bernabezaldy@gmail.com" class="hover:text-blue-400">bernabezaldy@gmail.com</a>
+                    <span>•</span>
+                    <a href="https://linkedin.com/in/zaldybernabe-me" class="hover:text-blue-400">LinkedIn Profile</a>
+                </div>
+            </div>
+        </header>
+
+        <!-- Summary -->
+        <section class="glass p-8 rounded-3xl">
+            <h2 class="text-2xl font-bold mb-4 text-emerald-400">Professional Summary</h2>
+            <p class="leading-relaxed text-slate-300">21+ years of international engineering excellence across Kuwait, Saudi Arabia, and Iraq. Proven expert in KOC/Aramco standards, MEP commissioning, and material reliability. Currently scaling leadership impact as a PMP® candidate with a focus on AI-assisted project management.</p>
+        </section>
+
+        <!-- Stats Grid -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div class="glass p-4 rounded-2xl text-center"><div class="text-2xl font-bold">21+</div><div class="text-xs text-slate-500">Years Exp</div></div>
+            <div class="glass p-4 rounded-2xl text-center"><div class="text-2xl font-bold">18+</div><div class="text-xs text-slate-500">International</div></div>
+            <div class="glass p-4 rounded-2xl text-center"><div class="text-2xl font-bold">KOC</div><div class="text-xs text-slate-500">Specialist</div></div>
+            <div class="glass p-4 rounded-2xl text-center"><div class="text-2xl font-bold">PMP</div><div class="text-xs text-slate-500">Candidate</div></div>
+        </div>
+
+        <!-- Experience Preview -->
+        <section class="space-y-4">
+            <h2 class="text-2xl font-bold text-white">Latest Experience</h2>
+            <div class="glass p-6 rounded-3xl border-l-4 border-emerald-500">
+                <h3 class="font-bold text-lg">Materials / Gas Reliability Technical Support</h3>
+                <p class="text-blue-400 text-sm">Gulf Spic General Trading & Contracting Co. (KOC) | 2023–Present</p>
+                <ul class="list-disc ml-5 mt-2 text-sm text-slate-300 space-y-1">
+                    <li>Directing material approvals and supplier management via SAP/eBEAMS.</li>
+                    <li>Driving CAT ID/ICMR creation for critical reliability compliance.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="text-center py-10 border-t border-slate-800">
+            <p class="text-slate-500 text-sm">© 2026 Zaldy L. Bernabe • Built for Project Leadership Excellence</p>
+        </footer>
+    </main>
 </body>
 </html>
