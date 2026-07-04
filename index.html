@@ -1,101 +1,404 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Zaldy L. Bernabe | Senior Commissioning Engineer</title>
-<meta name="description" content="Zaldy L. Bernabe — Senior Commissioning Engineer with 21+ years in Oil & Gas, HVAC & MEP operations. PMP® Candidate.">
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-<style>
-  *{margin:0;padding:0;box-sizing:border-box}
-  html{scroll-behavior:smooth}
-  body{font-family:'Plus Jakarta Sans',sans-serif;background:#05060a;color:#f1f5f9;overflow-x:hidden;padding:40px 20px;line-height:1.5}
-  .container{max-width:1024px;margin:0 auto;display:flex;flex-direction:column;gap:40px}
-  .glass{background:rgba(17,24,39,.55);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,.08)}
-  .aurora{position:fixed;inset:0;z-index:-1;overflow:hidden}
-  .aurora::before,.aurora::after{content:'';position:absolute;width:60vw;height:60vw;border-radius:50%;filter:blur(120px);opacity:.25;animation:float 18s ease-in-out infinite}
-  .aurora::before{background:#10b981;top:-10%;left:-10%}
-  .aurora::after{background:#3b82f6;bottom:-10%;right:-10%;animation-delay:-9s}
-  @keyframes float{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(60px,40px) scale(1.15)}}
-  .gradient-text{background:linear-gradient(90deg,#60a5fa,#34d399,#60a5fa);background-size:200% auto;-webkit-background-clip:text;background-clip:text;color:transparent;animation:shine 5s linear infinite}
-  @keyframes shine{to{background-position:200% center}}
-  .reveal{opacity:0;transform:translateY(40px);transition:all .8s cubic-bezier(.2,.8,.2,1)}
-  .reveal.show{opacity:1;transform:translateY(0)}
-  .hero{padding:48px;border-radius:40px;display:flex;flex-wrap:wrap;gap:40px;align-items:center}
-  .hero-left{flex:1;min-width:280px;display:flex;flex-direction:column;gap:24px}
-  .badge{display:inline-flex;align-items:center;gap:8px;padding:8px 16px;border-radius:99px;background:rgba(17,24,39,.55);border:1px solid rgba(16,185,129,.3);color:#34d399;font-size:14px;font-weight:600;width:fit-content}
-  .ping{position:relative;display:flex;height:8px;width:8px}
-  .ping span:first-child{position:absolute;width:100%;height:100%;border-radius:50%;background:#34d399;opacity:.75;animation:ping 1.5s cubic-bezier(0,0,.2,1) infinite}
-  .ping span:last-child{position:relative;border-radius:50%;height:8px;width:8px;background:#10b981}
-  @keyframes ping{75%,100%{transform:scale(2.5);opacity:0}}
-  h1{font-size:clamp(2.5rem,6vw,3.75rem);font-weight:800;line-height:1.05}
-  .subtitle{font-size:1.125rem;color:#94a3b8;max-width:520px}
-  .subtitle b{color:#fff;font-weight:600}
-  .btns{display:flex;flex-wrap:wrap;gap:16px}
-  .btn{padding:16px 32px;border-radius:99px;font-weight:700;text-decoration:none;transition:all .3s;display:inline-block}
-  .btn-primary{background:#fff;color:#000;box-shadow:0 10px 30px rgba(16,185,129,.15)}
-  .btn-primary:hover{background:#34d399;transform:scale(1.05)}
-  .btn-glass{background:rgba(17,24,39,.55);border:1px solid rgba(255,255,255,.08);color:#fff}
-  .btn-glass:hover{border-color:#3b82f6;transform:scale(1.05)}
-  .stats{padding:24px;border-radius:24px;width:100%;max-width:320px;display:grid;grid-template-columns:1fr 1fr;gap:16px}
-  .stat{padding:16px;background:rgba(15,23,42,.5);border-radius:16px;border:1px solid rgba(255,255,255,.05);transition:all .4s}
-  .stat:hover{transform:translateY(-6px);border-color:rgba(52,211,153,.4);background:rgba(52,211,153,.05)}
-  .stat .num{font-size:1.875rem;font-weight:800}
-  .stat .lbl{font-size:10px;text-transform:uppercase;color:#64748b;letter-spacing:2px;margin-top:4px}
-  .stat-pmp{grid-column:span 2;padding:16px;background:rgba(16,185,129,.1);border:1px solid rgba(16,185,129,.2);border-radius:16px}
-  .stat-pmp .num{font-size:1.125rem;font-weight:700;color:#34d399}
-  .stat-pmp .lbl{font-size:10px;text-transform:uppercase;color:rgba(16,185,129,.7);letter-spacing:2px}
-  .marquee-wrap{padding:20px 0;border-radius:16px;overflow:hidden}
-  .marquee{display:flex;gap:48px;animation:scroll 25s linear infinite;white-space:nowrap;color:#94a3b8;font-weight:600;font-size:14px;text-transform:uppercase;letter-spacing:2px}
-  @keyframes scroll{to{transform:translateX(-50%)}}
-  .section{padding:40px;border-radius:40px}
-  .sec-head{display:flex;align-items:center;gap:12px;margin-bottom:32px}
-  .sec-bar{height:32px;width:6px;border-radius:99px;background:linear-gradient(to bottom,#60a5fa,#34d399)}
-  h2{font-size:1.5rem;font-weight:700}
-  .grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px}
-  .card{padding:24px;border-radius:16px;border:1px solid rgba(255,255,255,.05);background:rgba(255,255,255,.03);transition:all .4s}
-  .card:hover{transform:translateY(-6px);border-color:rgba(52,211,153,.4);background:rgba(52,211,153,.05)}
-  .card .icon{font-size:1.5rem;margin-bottom:12px}
-  .card h3{font-weight:700}
-  .c-em{color:#34d399}.c-bl{color:#60a5fa}
-  .card p{font-size:14px;color:#94a3b8;margin-top:8px}
-  .timeline{border-left:1px solid rgba(255,255,255,.1);margin-left:12px;padding-left:32px;display:flex;flex-direction:column;gap:32px}
-  .t-item{position:relative}
-  .t-item::before{content:'';position:absolute;left:-39px;top:6px;width:12px;height:12px;border-radius:50%;background:#05060a;border:2px solid #34d399;box-shadow:0 0 0 4px rgba(52,211,153,.15)}
-  .t-date{font-size:12px;color:#34d399;font-weight:600;text-transform:uppercase;letter-spacing:2px}
-  .t-item h3{font-weight:700;margin-top:4px;font-size:1.05rem}
-  .t-item p{font-size:14px;color:#94a3b8;margin-top:6px}
-  .footer{border-radius:40px;padding:64px 40px;text-align:center;border:1px solid rgba(255,255,255,.1);background:radial-gradient(circle at 50% 120%,rgba(16,185,129,.18),rgba(59,130,246,.08) 40%,#05060a 75%);position:relative;overflow:hidden}
-  .footer h3{font-size:clamp(1.75rem,5vw,2.5rem);font-weight:800;margin-bottom:16px}
-  .footer>p{color:#94a3b8;max-width:480px;margin:0 auto 32px}
-  .glow-btn{display:inline-block;padding:18px 40px;background:#34d399;color:#05060a;font-weight:800;border-radius:99px;text-decoration:none;box-shadow:0 0 30px rgba(52,211,153,.4);transition:all .3s;margin-bottom:40px}
-  .glow-btn:hover{box-shadow:0 0 50px rgba(52,211,153,.7);transform:scale(1.05)}
-  .socials{display:flex;justify-content:center;gap:24px;flex-wrap:wrap;align-items:center;margin-bottom:32px}
-  .socials a{color:#94a3b8;text-decoration:none;font-weight:600;transition:all .3s}
-  .socials a:hover{color:#fff;transform:translateY(-4px)}
-  .sep{color:#334155}
-  .copyright{font-size:12px;color:#475569;text-transform:uppercase;letter-spacing:2px}
-  .top-btn{position:fixed;bottom:24px;right:24px;width:48px;height:48px;border-radius:50%;background:rgba(17,24,39,.7);border:1px solid rgba(52,211,153,.4);color:#34d399;font-size:20px;cursor:pointer;opacity:0;pointer-events:none;transition:all .3s;z-index:50;backdrop-filter:blur(10px)}
-  .top-btn.show{opacity:1;pointer-events:auto}
-  .top-btn:hover{background:#34d399;color:#05060a}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zaldy L. Bernabe | Senior Commissioning Engineer & Project Manager</title>
+    <style>
+        /* General Body Styling */
+        body {
+            font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa; /* Light background for modern feel */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh; /* Ensures full page height for centering */
+        }
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 30px 40px;
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08); /* Soft shadow for depth */
+            border: 1px solid #e0e0e0;
+        }
+
+        /* Headings */
+        h1 {
+            color: #0056b3; /* Professional blue */
+            text-align: center;
+            margin-bottom: 10px;
+            font-size: 2.8em;
+            letter-spacing: -0.5px;
+        }
+        h2 {
+            color: #007bff; /* Brighter blue for sub-heading */
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 25px;
+            font-size: 1.6em;
+            font-weight: 400;
+        }
+        h3 {
+            color: #28a745; /* Green for section titles - impactful */
+            border-bottom: 2px solid #28a745;
+            padding-bottom: 8px;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            font-size: 1.4em;
+            font-weight: 600;
+        }
+
+        /* Text and Paragraphs */
+        p {
+            margin-bottom: 15px;
+            font-size: 1.05em;
+        }
+        strong {
+            color: #000;
+        }
+
+        /* Contact & CTA Buttons */
+        .contact-info {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 1.1em;
+        }
+        .contact-info a {
+            color: #007bff;
+            text-decoration: none;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+        }
+        .contact-info a:hover {
+            color: #0056b3;
+            text-decoration: underline;
+        }
+        .btn-group {
+            text-align: center;
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+        .btn {
+            display: inline-block;
+            background-color: #007bff;
+            color: #ffffff;
+            padding: 12px 25px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 1.1em;
+            font-weight: 600;
+            margin: 0 10px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            box-shadow: 0 4px 10px rgba(0, 123, 255, 0.2);
+        }
+        .btn:hover {
+            background-color: #0056b3;
+            transform: translateY(-2px);
+        }
+        .btn-secondary {
+            background-color: #6c757d;
+            box-shadow: 0 4px 10px rgba(108, 117, 125, 0.2);
+        }
+        .btn-secondary:hover {
+            background-color: #5a6268;
+        }
+
+        /* Core Skills Layout */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .skill-category {
+            background-color: #f2faff; /* Lighter blue background */
+            padding: 18px;
+            border-radius: 10px;
+            border: 1px solid #cceeff;
+            box-shadow: 0 2px 8px rgba(0, 123, 255, 0.05);
+        }
+        .skill-category h4 {
+            color: #007bff;
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-size: 1.15em;
+            display: flex;
+            align-items: center;
+        }
+        .skill-category h4 span {
+            margin-right: 10px;
+            font-size: 1.3em;
+        }
+        .skill-category ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        .skill-category ul li {
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+        }
+        .skill-category ul li::before {
+            content: '✅'; /* Checkmark emoji */
+            margin-right: 8px;
+            font-size: 0.9em;
+        }
+
+        /* Experience Section */
+        .experience-item {
+            background-color: #fefefe;
+            border: 1px solid #eee;
+            border-left: 5px solid #007bff;
+            padding: 20px;
+            margin-bottom: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.03);
+        }
+        .experience-item h4 {
+            color: #007bff;
+            margin-top: 0;
+            margin-bottom: 5px;
+            font-size: 1.25em;
+        }
+        .experience-item .role {
+            font-style: italic;
+            color: #555;
+            margin-bottom: 8px;
+            font-size: 1.1em;
+        }
+        .experience-item .duration {
+            font-size: 0.95em;
+            color: #777;
+            margin-bottom: 15px;
+            display: block;
+        }
+        .experience-item ul {
+            list-style-type: disc;
+            margin-left: 20px;
+            padding: 0;
+        }
+        .experience-item ul li {
+            margin-bottom: 5px;
+        }
+
+        /* Achievements & Education */
+        .achievements-list, .education-list, .memberships-list {
+            list-style-type: none;
+            padding: 0;
+            margin-top: 15px;
+        }
+        .achievements-list li, .education-list li, .memberships-list li {
+            background-color: #e6f7ea; /* Light green for lists */
+            border-left: 4px solid #28a745;
+            padding: 12px 18px;
+            margin-bottom: 10px;
+            border-radius: 6px;
+            font-size: 1.05em;
+            display: flex;
+            align-items: center;
+        }
+        .achievements-list li::before {
+            content: '✨';
+            margin-right: 10px;
+            font-size: 1.1em;
+        }
+        .education-list li::before {
+            content: '🎓';
+            margin-right: 10px;
+            font-size: 1.1em;
+        }
+        .memberships-list li::before {
+            content: '🤝';
+            margin-right: 10px;
+            font-size: 1.1em;
+        }
+        .highlight {
+            font-weight: bold;
+            color: #007bff;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 25px;
+            border-top: 1px solid #e0e0e0;
+            color: #777;
+            font-size: 0.9em;
+        }
+    </style>
 </head>
 <body>
-<div class="aurora"></div>
+    <div class="container">
 
-<div class="container">
+        <!-- HEADER / HERO SECTION -->
+        <h1>Zaldy L. Bernabe, BSME</h1>
+        <h2>Senior Commissioning Engineer | MEP & Project Management Professional</h2>
+        <p class="contact-info">
+            <span style="font-weight: bold; color: #007bff;">Targeting Project & Commissioning Manager Roles</span>
+            <br>
+            <span style="font-weight: bold; color: #555;">Oil & Gas · HVAC · 21+ Yrs Experience · PMP® Candidate · KOC & ARAMCO Projects</span>
+            <br>
+            Ahmadi, Kuwait | <a href="tel:+96555064832">+965 55064832</a> | <a href="mailto:bernabezaldy@gmail.com">bernabezaldy@gmail.com</a>
+        </p>
+        <div class="btn-group">
+            <a href="https://linkedin.com/in/zaldybernabe-me" target="_blank" class="btn">🚀 Connect on LinkedIn</a>
+            <!-- IMPORTANT: Replace 'YOUR_CV_FILE.pdf' with the actual link to your PDF CV hosted on GitHub or elsewhere -->
+            <a href="YOUR_CV_FILE.pdf" download class="btn btn-secondary">📄 Download Full CV</a>
+        </div>
 
-  <!-- HERO -->
-  <header class="hero glass reveal">
-    <div class="hero-left">
-      <div class="badge"><span class="ping"><span></span><span></span></span> Available for Strategic Leadership Roles</div>
-      <h1>Engineering <span class="gradient-text">Excellence</span><br>Beyond 21 Years.</h1>
-      <p class="subtitle"><b>Zaldy L. Bernabe, BSME.</b> Powering Oil &amp; Gas, HVAC, and MEP operations through precision, reliability, and AI-driven workflows.</p>
-      <div class="btns">
-        <a href="mailto:bernabezaldy@gmail.com" class="btn btn-primary">Get In Touch</a>
-        <a href="https://linkedin.com/in/zaldybernabe-me" target="_blank" rel="noopener" class="btn btn-glass">LinkedIn →</a>
-      </div>
+        <!-- PROFESSIONAL SUMMARY -->
+        <h3>🎯 Professional Summary: Driving Excellence in Complex Projects</h3>
+        <p>
+            A highly accomplished <strong>Senior Mechanical Engineer and MEP Commissioning Specialist</strong> with over <strong>21 years of engineering experience</strong>, including <strong>18+ years internationally</strong> across Kuwait, Saudi Arabia, and Iraq. Proven expertise in supporting <strong>Kuwait Oil Company (KOC)</strong> and major EPC contractors in critical areas like HVAC systems, commissioning, QA/QC, project controls, and materials reliability.
+        </p>
+        <p>
+            Skilled in pre-commissioning, TAB, handover documentation, and multidisciplinary site coordination, always aligning with KOC and international standards. A consistent, high-impact performer in demanding, multicultural, and safety-critical environments. Currently pursuing <strong>PMP® certification</strong> to further lead and innovate in senior project management, commissioning, and facilities operations roles.
+        </p>
+
+        <!-- CORE SKILLS & TECHNICAL EXPERTISE -->
+        <h3>🛠️ Core Skills & Technical Expertise: Your Project Success Engine</h3>
+        <div class="skills-grid">
+            <div class="skill-category">
+                <h4><span>⚙️</span> Project & Construction Support</h4>
+                <ul>
+                    <li>MEP Coordination (HVAC, Plumbing, Firefighting, Piping, Electrical)</li>
+                    <li>Primavera P6, MS Project, Scheduling</li>
+                    <li>Cost Control, Oil & Gas Facilities</li>
+                </ul>
+            </div>
+            <div class="skill-category">
+                <h4><span>💨</span> HVAC & Commissioning</h4>
+                <ul>
+                    <li>HVAC Design, Chiller Plants, Equipment Selection</li>
+                    <li>System Integration, Pre-Commissioning, TAB</li>
+                    <li>Troubleshooting, Performance Optimization</li>
+                </ul>
+            </div>
+            <div class="skill-category">
+                <h4><span>🧠</span> Controls & Automation</h4>
+                <ul>
+                    <li>BMS, PLC Troubleshooting</li>
+                    <li>System Integration</li>
+                </ul>
+            </div>
+            <div class="skill-category">
+                <h4><span>📦</span> Procurement & Materials Reliability</h4>
+                <ul>
+                    <li>SAP, eBEAMS, Vendor Management</li>
+                    <li>Technical Evaluation, Material Submittals</li>
+                    <li>Logistics Coordination</li>
+                </ul>
+            </div>
+            <div class="skill-category">
+                <h4><span>✅</span> QA/QC & Compliance</h4>
+                <ul>
+                    <li>Inspection, Documentation, Reliability Engineering</li>
+                    <li>Maintenance Readiness, ISO, ASME, ASTM, NFPA</li>
+                    <li>KOC & Aramco Standards</li>
+                </ul>
+            </div>
+            <div class="skill-category">
+                <h4><span>💻</span> Digital Tools & Innovation</h4>
+                <ul>
+                    <li>AutoCAD 2D/3D</li>
+                    <li>Power BI</li>
+                    <li>AI-Assisted Documentation & Analysis</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- SELECTED CAREER ACHIEVEMENTS -->
+        <h3>🏆 Selected Career Achievements: Delivering Tangible Results</h3>
+        <ul class="achievements-list">
+            <li>Successfully led full MEP commissioning and handover for the <span class="highlight">KOC Lower Fars Heavy Oil Program</span>.</li>
+            <li>Key contributor to multidiscipline EPC delivery of a major Heavy Oil Development project (<strong>23 buildings, 8 disciplines</strong>) as part of the project team.</li>
+            <li>Achieved a significant <strong>15% cost reduction</strong> through a consultant-approved ductwork redesign.</li>
+            <li>Applied digital and AI tools to reduce document review preparation time, enhancing efficiency.</li>
+            <li>Recognized with <span class="highlight">Most Productive Accomplishment</span> and <span class="highlight">Honorable Service Award</span> for technical excellence.</li>
+        </ul>
+
+        <!-- PROFESSIONAL EXPERIENCE -->
+        <h3>💼 Professional Experience: A Track Record of Leadership</h3>
+
+        <div class="experience-item">
+            <h4>Materials / Gas Reliability Technical Support</h4>
+            <div class="role">Gulf Spic General Trading & Contracting Co. (supporting KOC)</div>
+            <div class="duration">Ahmadi, Kuwait | 2023 – Present</div>
+            <ul>
+                <li>Coordinates material approvals, RFQs, and supplier management via SAP/eBEAMS.</li>
+                <li>Drives reliability activities including CAT ID/ICMR creation and compliance verification.</li>
+                <li>Analyzes and compares technical standards to support critical engineering decisions.</li>
+            </ul>
+        </div>
+
+        <div class="experience-item">
+            <h4>Supervisor – Building Maintenance & HVAC</h4>
+            <div class="role">AlSaif Company | Heavy Oil Project Support Complex – KOC South Ratqa</div>
+            <div class="duration">Kuwait | 2021 – 2022</div>
+            <ul>
+                <li>Led multidisciplinary maintenance of HVAC, plumbing, firefighting, and electrical systems.</li>
+                <li>Optimized HVAC performance and supported PLC troubleshooting.</li>
+            </ul>
+        </div>
+
+        <div class="experience-item">
+            <h4>MEP Commissioning Engineer</h4>
+            <div class="role">Consolidated Contractors International Company (CCC) | Lower Fars Heavy Oil Program – KOC</div>
+            <div class="duration">Kuwait | 2019 – 2021</div>
+            <ul>
+                <li>Directed pre-commissioning and commissioning of HVAC/MEP systems.</li>
+                <li>Delivered TAB, reliability testing, redline, and as-built documentation for successful handover.</li>
+                <li>Coordinated across disciplines and contractors for a major Heavy Oil Development project (23 buildings).</li>
+            </ul>
+        </div>
+
+        <div class="experience-item">
+            <h4>Earlier Roles: Building a Strong Foundation</h4>
+            <div class="role">MEP Engineer · QA/QC Engineer · Planning Engineer · HVAC Designer</div>
+            <div class="duration">Saudi Arabia, Iraq, Philippines | 2005 – 2018</div>
+            <ul>
+                <li>Executed diverse MEP projects across universities, oilfields, and cultural centers.</li>
+                <li>Delivered comprehensive QA/QC, commissioning, and HVAC design solutions.</li>
+                <li>Built a strong technical foundation across multiple disciplines and regions.</li>
+            </ul>
+        </div>
+
+        <!-- EDUCATION & CERTIFICATIONS -->
+        <h3>🎓 Education & Professional Development</h3>
+        <ul class="education-list">
+            <li><strong>BS Mechanical Engineering</strong> — Don Honorio Ventura Technological State University (2005)</li>
+            <li><span class="highlight"><strong>PMP® Certification — In Progress</strong></span> (Project Management Professional)</li>
+            <li>PMI Planning & Scheduling Professional</li>
+            <li>Professional Certificate — AI Tools & Workflow Innovation (Coursiv)</li>
+            <li>UNODC Anti-Corruption Certification</li>
+            <li>BLS/CPR Certification</li>
+        </ul>
+
+        <!-- PROFESSIONAL MEMBERSHIPS -->
+        <h3>🤝 Professional Memberships & Leadership</h3>
+        <ul class="memberships-list">
+            <li><strong>Board Director</strong>, Philippine Society of Mechanical Engineers (PSME) Kuwait Chapter (2023–2026)</li>
+            <li>Member, Saudi Council of Engineers</li>
+        </ul>
+
+        <!-- CALL TO ACTION / FOOTER -->
+        <div class="footer">
+            <p><strong>Ready for senior leadership in MEP, HVAC, and Oil & Gas commissioning — driving reliability, compliance, and safe project delivery.</strong></p>
+            <p>
+                Let's connect and discuss how my expertise can benefit your team.<br>
+                <a href="https://linkedin.com/in/zaldybernabe-me" target="_blank">linkedin.com/in/zaldybernabe-me</a> | <a href="mailto:bernabezaldy@gmail.com">bernabezaldy@gmail.com</a>
+            </p>
+            <p style="font-size: 0.85em; color: #a0a0a0;">Confidential CV | References available upon request</p>
+        </div>
+
     </div>
-    <div class="stats glass">
-      <div class="stat"><div class="
+</body>
+</html>
