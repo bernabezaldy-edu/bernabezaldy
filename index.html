@@ -1,3 +1,6 @@
+**Refined HTML** (auto-rotates/adapts between portrait & landscape while keeping all original content):
+
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,328 +15,146 @@
             color: #333;
             margin: 0;
             padding: 0;
-            background: linear-gradient(135deg, #f0f2f5 0%, #e0e5ec 100%); /* Subtle gradient background */
+            background: linear-gradient(135deg, #f0f2f5 0%, #e0e5ec 100%);
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
+            transition: all 0.3s ease;
         }
+        
         .container {
-            max-width: 960px; /* Slightly wider for modern feel */
+            max-width: 960px;
             margin: 30px auto;
             padding: 40px;
             background-color: #ffffff;
             border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Deeper shadow */
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
             border: 1px solid #e0e0e0;
-            animation: fadeIn 1s ease-out; /* Gentle fade-in */
+            animation: fadeIn 1s ease-out;
         }
 
-        /* Keyframe Animation */
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(20px); }
             to { opacity: 1; transform: translateY(0); }
         }
 
         /* Typography */
-        h1 {
-            color: #004080; /* Darker, authoritative blue */
-            text-align: center;
-            margin-bottom: 10px;
-            font-size: 3.5em; /* Larger, more impactful */
-            letter-spacing: -1px;
-            line-height: 1.1;
-        }
-        h2 {
-            color: #0056b3;
-            text-align: center;
-            margin-top: 0;
-            margin-bottom: 35px; /* More space */
-            font-size: 1.8em;
-            font-weight: 400;
-            line-height: 1.3;
-        }
-        h3 {
-            color: #28a745; /* Green for section titles */
-            border-bottom: 3px solid #28a745; /* Thicker border */
-            padding-bottom: 12px;
-            margin-top: 50px; /* More top margin */
-            margin-bottom: 25px;
-            font-size: 1.6em;
-            font-weight: 700;
-            position: relative;
-        }
-        h3::before { /* Decorative element for h3 */
-            content: '';
-            position: absolute;
-            left: 0;
-            bottom: -3px;
-            width: 30px;
-            height: 3px;
-            background-color: #007bff; /* Secondary color for accent */
-        }
-        p {
-            margin-bottom: 18px;
-            font-size: 1.1em;
-            line-height: 1.7;
-        }
-        strong {
-            color: #000;
-        }
+        h1 { color: #004080; text-align: center; margin-bottom: 10px; font-size: 3.5em; letter-spacing: -1px; line-height: 1.1; }
+        h2 { color: #0056b3; text-align: center; margin-top: 0; margin-bottom: 35px; font-size: 1.8em; font-weight: 400; }
+        h3 { color: #28a745; border-bottom: 3px solid #28a745; padding-bottom: 12px; margin-top: 50px; margin-bottom: 25px; font-size: 1.6em; font-weight: 700; position: relative; }
+        h3::before { content: ''; position: absolute; left: 0; bottom: -3px; width: 30px; height: 3px; background-color: #007bff; }
+        p { margin-bottom: 18px; font-size: 1.1em; line-height: 1.7; }
+        strong { color: #000; }
 
         /* Contact & CTA */
-        .contact-info {
-            text-align: center;
-            margin-bottom: 30px;
-            font-size: 1.15em;
-            color: #555;
-        }
-        .contact-info a {
-            color: #007bff;
-            text-decoration: none;
-            margin: 0 12px;
-            transition: color 0.3s ease;
-            font-weight: 500;
-        }
-        .contact-info a:hover {
-            color: #0056b3;
-            text-decoration: underline;
-        }
-        .cta-button-wrapper {
-            text-align: center;
-            margin-top: 40px;
-            margin-bottom: 40px;
-        }
+        .contact-info { text-align: center; margin-bottom: 30px; font-size: 1.15em; color: #555; }
+        .contact-info a { color: #007bff; text-decoration: none; margin: 0 12px; transition: color 0.3s ease; font-weight: 500; }
+        .contact-info a:hover { color: #0056b3; text-decoration: underline; }
+        
+        .cta-button-wrapper { text-align: center; margin-top: 40px; margin-bottom: 40px; }
         .btn-primary {
-            display: inline-block;
-            background: linear-gradient(45deg, #007bff, #0056b3); /* Gradient button */
-            color: #ffffff;
-            padding: 15px 35px; /* Larger padding */
-            border-radius: 10px; /* Softer edges */
-            text-decoration: none;
-            font-size: 1.3em; /* Larger text */
-            font-weight: 700;
-            transition: all 0.3s ease;
-            box-shadow: 0 6px 15px rgba(0, 123, 255, 0.3);
-            border: none;
-            cursor: pointer;
+            display: inline-block; background: linear-gradient(45deg, #007bff, #0056b3);
+            color: #ffffff; padding: 15px 35px; border-radius: 10px; text-decoration: none;
+            font-size: 1.3em; font-weight: 700; transition: all 0.3s ease;
+            box-shadow: 0 6px 15px rgba(0, 123, 255, 0.3); border: none; cursor: pointer;
         }
-        .btn-primary:hover {
-            background: linear-gradient(45deg, #0056b3, #004080);
-            transform: translateY(-3px) scale(1.02); /* Lift and slightly grow */
-            box-shadow: 0 8px 20px rgba(0, 123, 255, 0.4);
-        }
+        .btn-primary:hover { background: linear-gradient(45deg, #0056b3, #004080); transform: translateY(-3px) scale(1.02); box-shadow: 0 8px 20px rgba(0, 123, 255, 0.4); }
 
         /* Skills Grid */
         .skills-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px; /* More space */
+            gap: 25px;
             margin-top: 25px;
         }
         .skill-category {
-            background-color: #f8faff; /* Very light blue */
-            padding: 22px; /* More padding */
-            border-radius: 12px;
-            border: 1px solid #cceeff;
-            box-shadow: 0 4px 12px rgba(0, 123, 255, 0.08); /* Subtle shadow */
+            background-color: #f8faff; padding: 22px; border-radius: 12px;
+            border: 1px solid #cceeff; box-shadow: 0 4px 12px rgba(0, 123, 255, 0.08);
             transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
-        .skill-category:hover {
-            transform: translateY(-5px); /* Lift on hover */
-            box-shadow: 0 8px 20px rgba(0, 123, 255, 0.12);
-        }
-        .skill-category h4 {
-            color: #007bff;
-            margin-top: 0;
-            margin-bottom: 18px;
-            font-size: 1.25em;
-            display: flex;
-            align-items: center;
-            font-weight: 600;
-        }
-        .skill-category h4 span {
-            margin-right: 12px;
-            font-size: 1.5em; /* Larger icon */
-            line-height: 1;
-        }
-        .skill-category ul {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
-        }
-        .skill-category ul li {
-            margin-bottom: 10px;
-            display: flex;
-            align-items: flex-start; /* Align icon at top */
-            font-size: 1.05em;
-        }
-        .skill-category ul li::before {
-            content: '✅';
-            margin-right: 10px;
-            font-size: 0.95em;
-            flex-shrink: 0; /* Prevent icon from shrinking */
-            margin-top: 2px; /* Slight vertical adjust */
-        }
+        .skill-category:hover { transform: translateY(-5px); box-shadow: 0 8px 20px rgba(0, 123, 255, 0.12); }
+        .skill-category h4 { color: #007bff; margin-top: 0; margin-bottom: 18px; font-size: 1.25em; display: flex; align-items: center; font-weight: 600; }
+        .skill-category h4 span { margin-right: 12px; font-size: 1.5em; line-height: 1; }
+        .skill-category ul { list-style-type: none; padding: 0; margin: 0; }
+        .skill-category ul li { margin-bottom: 10px; display: flex; align-items: flex-start; font-size: 1.05em; }
+        .skill-category ul li::before { content: '✅'; margin-right: 10px; font-size: 0.95em; flex-shrink: 0; margin-top: 2px; }
 
-        /* Experience Section */
+        /* Experience */
         .experience-item {
-            background-color: #ffffff;
-            border: 1px solid #eee;
-            border-left: 6px solid #007bff; /* Thicker left border */
-            padding: 25px; /* More padding */
-            margin-bottom: 30px;
-            border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); /* Softer shadow */
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            background-color: #ffffff; border: 1px solid #eee; border-left: 6px solid #007bff;
+            padding: 25px; margin-bottom: 30px; border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
-        .experience-item:hover {
-            transform: translateX(5px); /* Slide slightly on hover */
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
-        }
-        .experience-item h4 {
-            color: #007bff;
-            margin-top: 0;
-            margin-bottom: 8px;
-            font-size: 1.35em;
-        }
-        .experience-item .role {
-            font-style: italic;
-            color: #555;
-            margin-bottom: 10px;
-            font-size: 1.15em;
-            font-weight: 500;
-        }
-        .experience-item .duration {
-            font-size: 1em;
-            color: #777;
-            margin-bottom: 18px;
-            display: block;
-            border-bottom: 1px dashed #eee; /* Subtle separator */
-            padding-bottom: 10px;
-        }
-        .experience-item ul {
-            list-style-type: disc;
-            margin-left: 25px;
-            padding: 0;
-        }
-        .experience-item ul li {
-            margin-bottom: 8px;
-            font-size: 1.05em;
-        }
+        .experience-item:hover { transform: translateX(5px); box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08); }
+        .experience-item h4 { color: #007bff; margin-top: 0; margin-bottom: 8px; font-size: 1.35em; }
+        .experience-item .role { font-style: italic; color: #555; margin-bottom: 10px; font-size: 1.15em; font-weight: 500; }
+        .experience-item .duration { font-size: 1em; color: #777; margin-bottom: 18px; display: block; border-bottom: 1px dashed #eee; padding-bottom: 10px; }
+        .experience-item ul { list-style-type: disc; margin-left: 25px; padding: 0; }
+        .experience-item ul li { margin-bottom: 8px; font-size: 1.05em; }
 
-        /* Achievements & Education */
-        .achievements-list, .education-list, .memberships-list {
-            list-style-type: none;
-            padding: 0;
-            margin-top: 20px;
-        }
+        /* Lists */
+        .achievements-list, .education-list, .memberships-list { list-style-type: none; padding: 0; margin-top: 20px; }
         .achievements-list li, .education-list li, .memberships-list li {
-            background-color: #e6f7ea; /* Light green for lists */
-            border-left: 5px solid #28a745; /* Thicker border */
-            padding: 15px 20px;
-            margin-bottom: 12px;
-            border-radius: 8px;
-            font-size: 1.1em;
-            display: flex;
-            align-items: flex-start;
+            background-color: #e6f7ea; border-left: 5px solid #28a745; padding: 15px 20px;
+            margin-bottom: 12px; border-radius: 8px; font-size: 1.1em; display: flex; align-items: flex-start;
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
         }
-        .achievements-list li::before {
-            content: '🌟'; /* More vibrant star */
-            margin-right: 12px;
-            font-size: 1.2em;
-            flex-shrink: 0;
-            margin-top: 2px;
-        }
-        .education-list li {
-            background-color: #f0f8ff; /* Light blue for education */
-            border-left-color: #007bff;
-        }
-        .education-list li::before {
-            content: '🎓';
-            margin-right: 12px;
-            font-size: 1.2em;
-            flex-shrink: 0;
-            margin-top: 2px;
-        }
-        .memberships-list li {
-            background-color: #fffaf0; /* Light yellow for memberships */
-            border-left-color: #ffc107;
-        }
-        .memberships-list li::before {
-            content: '🤝';
-            margin-right: 12px;
-            font-size: 1.2em;
-            flex-shrink: 0;
-            margin-top: 2px;
-        }
-        .highlight {
-            font-weight: bold;
-            color: #007bff;
-        }
+        .achievements-list li::before { content: '🌟'; margin-right: 12px; font-size: 1.2em; flex-shrink: 0; margin-top: 2px; }
+        .education-list li { background-color: #f0f8ff; border-left-color: #007bff; }
+        .education-list li::before { content: '🎓'; margin-right: 12px; font-size: 1.2em; flex-shrink: 0; margin-top: 2px; }
+        .memberships-list li { background-color: #fffaf0; border-left-color: #ffc107; }
+        .memberships-list li::before { content: '🤝'; margin-right: 12px; font-size: 1.2em; flex-shrink: 0; margin-top: 2px; }
+        .highlight { font-weight: bold; color: #007bff; }
 
         /* Footer */
-        .footer {
-            text-align: center;
-            margin-top: 60px;
-            padding-top: 30px;
-            border-top: 1px solid #e0e0e0;
-            color: #777;
-            font-size: 0.95em;
-        }
-        .footer p {
-            margin-bottom: 10px;
-        }
-        .footer a {
-            color: #007bff;
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.3s ease;
-        }
-        .footer a:hover {
-            color: #0056b3;
-            text-decoration: underline;
-        }
+        .footer { text-align: center; margin-top: 60px; padding-top: 30px; border-top: 1px solid #e0e0e0; color: #777; font-size: 0.95em; }
+        .footer p { margin-bottom: 10px; }
+        .footer a { color: #007bff; text-decoration: none; font-weight: 500; transition: color 0.3s ease; }
+        .footer a:hover { color: #0056b3; text-decoration: underline; }
 
-        /* Responsive adjustments */
-        @media (max-width: 768px) {
+        /* ========== ORIENTATION-AWARE STYLES ========== */
+        
+        /* Landscape Mode */
+        @media (orientation: landscape) {
             .container {
-                margin: 20px;
-                padding: 25px;
-            }
-            h1 {
-                font-size: 2.5em;
-            }
-            h2 {
-                font-size: 1.4em;
-                margin-bottom: 25px;
-            }
-            h3 {
-                font-size: 1.3em;
-                margin-top: 40px;
-                margin-bottom: 20px;
-            }
-            .btn-primary {
-                padding: 12px 25px;
-                font-size: 1.1em;
+                max-width: 1100px;
+                padding: 35px 50px;
             }
             .skills-grid {
-                grid-template-columns: 1fr; /* Stack skills on small screens */
+                grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
             }
-            .contact-info {
-                font-size: 1em;
+            h1 { font-size: 3.2em; }
+            h2 { font-size: 1.6em; }
+        }
+
+        /* Portrait Mode */
+        @media (orientation: portrait) {
+            .container {
+                margin: 20px;
+                padding: 30px 25px;
             }
-            .contact-info a {
-                display: block;
-                margin: 8px 0;
+            .skills-grid {
+                grid-template-columns: 1fr;
             }
+            h1 { font-size: 2.6em; }
+            h2 { font-size: 1.45em; margin-bottom: 25px; }
+            h3 { font-size: 1.4em; margin-top: 40px; }
+            .btn-primary { padding: 14px 30px; font-size: 1.15em; }
+        }
+
+        /* Small screens (phones) */
+        @media (max-width: 768px) {
+            .container { margin: 15px; padding: 22px 18px; }
+            h1 { font-size: 2.3em; }
+            h2 { font-size: 1.25em; }
+            .contact-info { font-size: 1em; }
+            .contact-info a { display: block; margin: 6px 0; }
         }
     </style>
 </head>
 <body>
     <div class="container">
-
         <!-- HEADER / HERO SECTION -->
         <h1>Zaldy L. Bernabe, BSME</h1>
         <h2>🚀 Leading Project & Commissioning Manager Roles | 21+ Yrs Oil & Gas · HVAC · MEP Professional</h2>
@@ -348,14 +169,10 @@
 
         <!-- PROFESSIONAL SUMMARY -->
         <h3>🎯 Professional Summary: Engineering Leadership & Impact</h3>
-        <p>
-            A highly seasoned <strong>Senior Mechanical Engineer & MEP Commissioning Specialist</strong> with over <strong>21 years of global engineering experience</strong>, including 18+ years internationally across Kuwait, Saudi Arabia, and Iraq. I excel in delivering complex projects for <strong>Kuwait Oil Company (KOC)</strong> and major EPC contractors, with deep expertise in HVAC systems, commissioning, QA/QC, project controls, and materials reliability.
-        </p>
-        <p>
-            My track record spans pre-commissioning, TAB, handover documentation, and meticulous multidisciplinary site coordination, all aligned with stringent international and KOC standards. I thrive in demanding, multicultural, and safety-critical environments. Currently advancing with <strong>PMP® certification</strong>, I am poised to spearhead senior leadership roles in project management, commissioning, and facilities operations, driving efficiency and excellence.
-        </p>
+        <p>A highly seasoned <strong>Senior Mechanical Engineer & MEP Commissioning Specialist</strong> with over <strong>21 years of global engineering experience</strong>, including 18+ years internationally across Kuwait, Saudi Arabia, and Iraq. I excel in delivering complex projects for <strong>Kuwait Oil Company (KOC)</strong> and major EPC contractors, with deep expertise in HVAC systems, commissioning, QA/QC, project controls, and materials reliability.</p>
+        <p>My track record spans pre-commissioning, TAB, handover documentation, and meticulous multidisciplinary site coordination, all aligned with stringent international and KOC standards. I thrive in demanding, multicultural, and safety-critical environments. Currently advancing with <strong>PMP® certification</strong>, I am poised to spearhead senior leadership roles in project management, commissioning, and facilities operations, driving efficiency and excellence.</p>
 
-        <!-- CORE SKILLS & TECHNICAL EXPERTISE -->
+        <!-- CORE SKILLS -->
         <h3>🛠️ Core Skills & Technical Expertise: Your Blueprint for Success</h3>
         <div class="skills-grid">
             <div class="skill-category">
@@ -407,7 +224,7 @@
             </div>
         </div>
 
-        <!-- SELECTED CAREER ACHIEVEMENTS -->
+        <!-- ACHIEVEMENTS -->
         <h3>🏆 Selected Career Achievements: Driving Impact & Innovation</h3>
         <ul class="achievements-list">
             <li>Spearheaded full MEP commissioning and successful handover for the critical <span class="highlight">KOC Lower Fars Heavy Oil Program</span>.</li>
@@ -417,7 +234,7 @@
             <li>Recipient of the <span class="highlight">Most Productive Accomplishment</span> and <span class="highlight">Honorable Service Award</span>, recognizing technical excellence and dedication.</li>
         </ul>
 
-        <!-- PROFESSIONAL EXPERIENCE -->
+        <!-- EXPERIENCE -->
         <h3>💼 Professional Experience: A Legacy of Leadership & Delivery</h3>
 
         <div class="experience-item">
@@ -463,7 +280,7 @@
             </ul>
         </div>
 
-        <!-- EDUCATION & CERTIFICATIONS -->
+        <!-- EDUCATION -->
         <h3>🎓 Education & Professional Advancement</h3>
         <ul class="education-list">
             <li><strong>BS Mechanical Engineering</strong> — Don Honorio Ventura Technological State University (2005)</li>
@@ -473,14 +290,14 @@
             <li>UNODC Anti-Corruption Certification | BLS/CPR Certification</li>
         </ul>
 
-        <!-- PROFESSIONAL MEMBERSHIPS -->
+        <!-- MEMBERSHIPS -->
         <h3>🤝 Professional Memberships & Community Leadership</h3>
         <ul class="memberships-list">
             <li><strong>Board Director</strong>, Philippine Society of Mechanical Engineers (PSME) Kuwait Chapter (2023–2026)</li>
             <li>Member, Saudi Council of Engineers</li>
         </ul>
 
-        <!-- FINAL CALL TO ACTION / FOOTER -->
+        <!-- FOOTER -->
         <div class="footer">
             <p style="font-size: 1.15em; font-weight: bold; color: #004080;">
                 Ready to elevate your next project? Let's discuss how my 21+ years of expertise in MEP, HVAC, and Oil & Gas commissioning can drive your success.
@@ -493,7 +310,7 @@
                 References available upon request.
             </p>
         </div>
-
     </div>
 </body>
 </html>
+```
