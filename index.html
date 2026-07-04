@@ -2,125 +2,116 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zaldy L. Bernabe | Senior Commissioning Engineer</title>
-    <meta name="description" content="Zaldy L. Bernabe — Senior Commissioning Engineer with 21+ years in Oil & Gas, HVAC & MEP operations. PMP® Candidate.">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <style>
-        html { scroll-behavior: smooth; }
-        body { font-family: 'Plus Jakarta Sans', sans-serif; background: #05060a; color: #f1f5f9; overflow-x: hidden; }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zaldy L. Bernabe | Senior Commissioning Engineer</title>
+<meta name="description" content="Zaldy L. Bernabe — Senior Commissioning Engineer with 21+ years in Oil & Gas, HVAC & MEP operations. PMP® Candidate.">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html { scroll-behavior:smooth; }
+  body { font-family:'Plus Jakarta Sans',sans-serif; background:#05060a; color:#f1f5f9; overflow-x:hidden; padding:40px 20px; line-height:1.5; }
 
-        .glass { background: rgba(17, 24, 39, 0.55); backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.08); }
+  .container { max-width:1024px; margin:0 auto; display:flex; flex-direction:column; gap:40px; }
+  .glass { background:rgba(17,24,39,0.55); backdrop-filter:blur(20px); -webkit-backdrop-filter:blur(20px); border:1px solid rgba(255,255,255,0.08); }
 
-        .aurora { position: fixed; inset: 0; z-index: -1; overflow: hidden; }
-        .aurora::before, .aurora::after {
-            content: ''; position: absolute; width: 60vw; height: 60vw; border-radius: 50%;
-            filter: blur(120px); opacity: 0.25; animation: float 18s ease-in-out infinite;
-        }
-        .aurora::before { background: #10b981; top: -10%; left: -10%; }
-        .aurora::after { background: #3b82f6; bottom: -10%; right: -10%; animation-delay: -9s; }
-        @keyframes float { 0%,100% { transform: translate(0,0) scale(1); } 50% { transform: translate(60px,40px) scale(1.15); } }
+  /* Aurora background */
+  .aurora { position:fixed; inset:0; z-index:-1; overflow:hidden; }
+  .aurora::before, .aurora::after { content:''; position:absolute; width:60vw; height:60vw; border-radius:50%; filter:blur(120px); opacity:0.25; animation:float 18s ease-in-out infinite; }
+  .aurora::before { background:#10b981; top:-10%; left:-10%; }
+  .aurora::after { background:#3b82f6; bottom:-10%; right:-10%; animation-delay:-9s; }
+  @keyframes float { 0%,100%{transform:translate(0,0) scale(1);} 50%{transform:translate(60px,40px) scale(1.15);} }
 
-        .gradient-text { background: linear-gradient(90deg,#60a5fa,#34d399,#60a5fa); background-size: 200% auto;
-            -webkit-background-clip: text; background-clip: text; color: transparent; animation: shine 5s linear infinite; }
-        @keyframes shine { to { background-position: 200% center; } }
+  .gradient-text { background:linear-gradient(90deg,#60a5fa,#34d399,#60a5fa); background-size:200% auto; -webkit-background-clip:text; background-clip:text; color:transparent; animation:shine 5s linear infinite; }
+  @keyframes shine { to { background-position:200% center; } }
 
-        .reveal { opacity: 0; transform: translateY(40px); transition: all .8s cubic-bezier(.2,.8,.2,1); }
-        .reveal.show { opacity: 1; transform: translateY(0); }
+  .reveal { opacity:0; transform:translateY(40px); transition:all .8s cubic-bezier(.2,.8,.2,1); }
+  .reveal.show { opacity:1; transform:translateY(0); }
 
-        .card-hover { transition: transform .4s cubic-bezier(.2,.8,.2,1), border-color .4s, background .4s; }
-        .card-hover:hover { transform: translateY(-6px); border-color: rgba(52,211,153,0.4); background: rgba(52,211,153,0.05); }
+  /* HERO */
+  .hero { padding:48px; border-radius:40px; display:flex; flex-wrap:wrap; gap:40px; align-items:center; }
+  .hero-left { flex:1; min-width:280px; display:flex; flex-direction:column; gap:24px; }
+  .badge { display:inline-flex; align-items:center; gap:8px; padding:8px 16px; border-radius:99px; background:rgba(17,24,39,0.55); border:1px solid rgba(16,185,129,0.3); color:#34d399; font-size:14px; font-weight:600; width:fit-content; }
+  .ping { position:relative; display:flex; height:8px; width:8px; }
+  .ping span:first-child { position:absolute; inline-size:100%; block-size:100%; border-radius:50%; background:#34d399; opacity:.75; animation:ping 1.5s cubic-bezier(0,0,.2,1) infinite; }
+  .ping span:last-child { position:relative; border-radius:50%; height:8px; width:8px; background:#10b981; }
+  @keyframes ping { 75%,100% { transform:scale(2.5); opacity:0; } }
 
-        .timeline-item::before { content: ''; position: absolute; left: -35px; top: 6px; width: 12px; height: 12px;
-            border-radius: 50%; background: #05060a; border: 2px solid #34d399; box-shadow: 0 0 0 4px rgba(52,211,153,0.15); }
+  h1 { font-size:clamp(2.5rem,6vw,3.75rem); font-weight:800; line-height:1.05; }
+  .subtitle { font-size:1.125rem; color:#94a3b8; max-width:520px; }
+  .subtitle b { color:#fff; font-weight:600; }
 
-        .marquee { display: flex; gap: 3rem; animation: scroll 25s linear infinite; white-space: nowrap; }
-        @keyframes scroll { to { transform: translateX(-50%); } }
+  .btns { display:flex; flex-wrap:wrap; gap:16px; }
+  .btn { padding:16px 32px; border-radius:99px; font-weight:700; text-decoration:none; transition:all .3s; display:inline-block; }
+  .btn-primary { background:#fff; color:#000; box-shadow:0 10px 30px rgba(16,185,129,0.15); }
+  .btn-primary:hover { background:#34d399; transform:scale(1.05); }
+  .btn-glass { background:rgba(17,24,39,0.55); border:1px solid rgba(255,255,255,0.08); color:#fff; }
+  .btn-glass:hover { border-color:#3b82f6; transform:scale(1.05); }
 
-        .footer-grad { background: radial-gradient(circle at 50% 120%, rgba(16,185,129,0.18), rgba(59,130,246,0.08) 40%, #05060a 75%); }
-        .glow-btn { box-shadow: 0 0 30px rgba(52,211,153,0.4); transition: all .3s; }
-        .glow-btn:hover { box-shadow: 0 0 50px rgba(52,211,153,0.7); transform: scale(1.05); }
-        .social-icon { transition: all .3s; }
-        .social-icon:hover { transform: translateY(-4px) scale(1.1); }
-    </style>
+  .stats { padding:24px; border-radius:24px; width:100%; max-width:320px; display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+  .stat { padding:16px; background:rgba(15,23,42,0.5); border-radius:16px; border:1px solid rgba(255,255,255,0.05); transition:all .4s; }
+  .stat:hover { transform:translateY(-6px); border-color:rgba(52,211,153,0.4); background:rgba(52,211,153,0.05); }
+  .stat .num { font-size:1.875rem; font-weight:800; }
+  .stat .lbl { font-size:10px; text-transform:uppercase; color:#64748b; letter-spacing:2px; margin-top:4px; }
+  .stat-pmp { grid-column:span 2; padding:16px; background:rgba(16,185,129,0.1); border:1px solid rgba(16,185,129,0.2); border-radius:16px; }
+  .stat-pmp .num { font-size:1.125rem; font-weight:700; color:#34d399; }
+  .stat-pmp .lbl { font-size:10px; text-transform:uppercase; color:rgba(16,185,129,0.7); letter-spacing:2px; }
+
+  /* MARQUEE */
+  .marquee-wrap { padding:20px 0; border-radius:16px; overflow:hidden; }
+  .marquee { display:flex; gap:48px; animation:scroll 25s linear infinite; white-space:nowrap; color:#94a3b8; font-weight:600; font-size:14px; text-transform:uppercase; letter-spacing:2px; }
+  @keyframes scroll { to { transform:translateX(-50%); } }
+
+  /* SECTIONS */
+  .section { padding:40px; border-radius:40px; }
+  .sec-head { display:flex; align-items:center; gap:12px; margin-bottom:32px; }
+  .sec-bar { height:32px; width:6px; border-radius:99px; background:linear-gradient(to bottom,#60a5fa,#34d399); }
+  h2 { font-size:1.5rem; font-weight:700; }
+
+  .grid2 { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:24px; }
+  .card { padding:24px; border-radius:16px; border:1px solid rgba(255,255,255,0.05); background:rgba(255,255,255,0.03); transition:all .4s; }
+  .card:hover { transform:translateY(-6px); border-color:rgba(52,211,153,0.4); background:rgba(52,211,153,0.05); }
+  .card .icon { font-size:1.5rem; margin-bottom:12px; }
+  .card h3 { font-weight:700; }
+  .card .c-em { color:#34d399; }
+  .card .c-bl { color:#60a5fa; }
+  .card p { font-size:14px; color:#94a3b8; margin-top:8px; }
+
+  /* TIMELINE */
+  .timeline { border-left:1px solid rgba(255,255,255,0.1); margin-left:12px; padding-left:32px; display:flex; flex-direction:column; gap:32px; }
+  .t-item { position:relative; }
+  .t-item::before { content:''; position:absolute; left:-39px; top:6px; width:12px; height:12px; border-radius:50%; background:#05060a; border:2px solid #34d399; box-shadow:0 0 0 4px rgba(52,211,153,0.15); }
+  .t-date { font-size:12px; color:#34d399; font-weight:600; text-transform:uppercase; letter-spacing:2px; }
+  .t-item h3 { font-weight:700; margin-top:4px; font-size:1.05rem; }
+  .t-item p { font-size:14px; color:#94a3b8; margin-top:6px; }
+
+  /* FOOTER */
+  .footer { border-radius:40px; padding:64px 40px; text-align:center; border:1px solid rgba(255,255,255,0.1); background:radial-gradient(circle at 50% 120%, rgba(16,185,129,0.18), rgba(59,130,246,0.08) 40%, #05060a 75%); position:relative; overflow:hidden; }
+  .footer h3 { font-size:clamp(1.75rem,5vw,2.5rem); font-weight:800; margin-bottom:16px; }
+  .footer p { color:#94a3b8; max-width:480px; margin:0 auto 32px; }
+  .glow-btn { display:inline-block; padding:18px 40px; background:#34d399; color:#05060a; font-weight:800; border-radius:99px; text-decoration:none; box-shadow:0 0 30px rgba(52,211,153,0.4); transition:all .3s; margin-bottom:40px; }
+  .glow-btn:hover { box-shadow:0 0 50px rgba(52,211,153,0.7); transform:scale(1.05); }
+  .socials { display:flex; justify-content:center; gap:24px; flex-wrap:wrap; align-items:center; margin-bottom:32px; }
+  .socials a { color:#94a3b8; text-decoration:none; font-weight:600; transition:all .3s; }
+  .socials a:hover { color:#fff; transform:translateY(-4px); }
+  .socials .c-em { color:#34d399; }
+  .socials .c-bl { color:#60a5fa; }
+  .sep { color:#334155; }
+  .copyright { font-size:12px; color:#475569; text-transform:uppercase; letter-spacing:2px; }
+
+  .top-btn { position:fixed; bottom:24px; right:24px; width:48px; height:48px; border-radius:50%; background:rgba(17,24,39,0.7); border:1px solid rgba(52,211,153,0.4); color:#34d399; font-size:20px; cursor:pointer; opacity:0; pointer-events:none; transition:all .3s; z-index:50; backdrop-filter:blur(10px); }
+  .top-btn.show { opacity:1; pointer-events:auto; }
+  .top-btn:hover { background:#34d399; color:#05060a; }
+</style>
 </head>
-<body class="py-10 px-5 md:px-6">
-    <div class="aurora"></div>
+<body>
+<div class="aurora"></div>
 
-    <main class="max-w-5xl mx-auto space-y-10">
+<div class="container">
 
-        <!-- HERO -->
-        <header class="glass p-8 md:p-12 rounded-[2.5rem] flex flex-col lg:flex-row items-center gap-10 reveal">
-            <div class="flex-1 space-y-6">
-                <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full glass border-emerald-500/30 text-emerald-400 text-sm font-semibold">
-                    <span class="relative flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span></span>
-                    Available for Strategic Leadership Roles
-                </div>
-                <h1 class="text-5xl md:text-6xl font-extrabold leading-[1.05]">
-                    Engineering <span class="gradient-text">Excellence</span><br>Beyond 21 Years.
-                </h1>
-                <p class="text-lg text-slate-400 max-w-lg leading-relaxed">
-                    <span class="text-white font-semibold">Zaldy L. Bernabe, BSME.</span> Powering Oil &amp; Gas, HVAC, and MEP operations through precision, reliability, and AI-driven workflows.
-                </p>
-                <div class="flex flex-wrap gap-4">
-                    <a href="mailto:bernabezaldy@gmail.com" class="px-8 py-4 bg-white text-black font-bold rounded-full hover:bg-emerald-400 hover:scale-105 transition-all shadow-lg shadow-emerald-500/10">Get In Touch</a>
-                    <a href="https://linkedin.com/in/zaldybernabe-me" target="_blank" rel="noopener" class="px-8 py-4 glass text-white font-bold rounded-full hover:border-blue-500 hover:scale-105 transition-all">LinkedIn →</a>
-                </div>
-            </div>
-
-            <div class="glass p-6 rounded-3xl w-full lg:w-80 grid grid-cols-2 gap-4">
-                <div class="p-4 bg-slate-900/50 rounded-2xl card-hover border border-white/5"><div class="text-3xl font-extrabold gradient-text">21+</div><div class="text-[10px] uppercase text-slate-500 tracking-widest mt-1">Years Exp</div></div>
-                <div class="p-4 bg-slate-900/50 rounded-2xl card-hover border border-white/5"><div class="text-3xl font-extrabold gradient-text">18+</div><div class="text-[10px] uppercase text-slate-500 tracking-widest mt-1">Intl. Projects</div></div>
-                <div class="p-4 bg-slate-900/50 rounded-2xl card-hover border border-white/5"><div class="text-3xl font-extrabold gradient-text">8</div><div class="text-[10px] uppercase text-slate-500 tracking-widest mt-1">Disciplines</div></div>
-                <div class="p-4 bg-slate-900/50 rounded-2xl card-hover border border-white/5"><div class="text-3xl font-extrabold gradient-text">23</div><div class="text-[10px] uppercase text-slate-500 tracking-widest mt-1">Buildings</div></div>
-                <div class="col-span-2 p-4 bg-emerald-500/10 border border-emerald-500/20 rounded-2xl">
-                    <div class="text-lg font-bold text-emerald-400">PMP® Candidate</div>
-                    <div class="text-[10px] uppercase text-emerald-500/70 tracking-widest">Strategic Project Mgmt</div>
-                </div>
-            </div>
-        </header>
-
-        <!-- SKILLS MARQUEE -->
-        <section class="glass py-5 rounded-2xl overflow-hidden reveal">
-            <div class="marquee text-slate-400 font-semibold text-sm uppercase tracking-widest">
-                <span>Commissioning</span><span>•</span><span>Oil &amp; Gas</span><span>•</span><span>HVAC Systems</span><span>•</span><span>MEP Operations</span><span>•</span><span>Power BI Analytics</span><span>•</span><span>AI Workflows</span><span>•</span><span>Project Management</span><span>•</span>
-                <span>Commissioning</span><span>•</span><span>Oil &amp; Gas</span><span>•</span><span>HVAC Systems</span><span>•</span><span>MEP Operations</span><span>•</span><span>Power BI Analytics</span><span>•</span><span>AI Workflows</span><span>•</span><span>Project Management</span><span>•</span>
-            </div>
-        </section>
-
-        <!-- CAREER IMPACT -->
-        <section class="glass p-8 md:p-10 rounded-[2.5rem] reveal">
-            <div class="flex items-center gap-3 mb-8">
-                <div class="h-8 w-1.5 rounded-full bg-gradient-to-b from-blue-400 to-emerald-400"></div>
-                <h2 class="text-2xl font-bold">Career Impact</h2>
-            </div>
-            <div class="grid md:grid-cols-2 gap-6">
-                <div class="p-6 rounded-2xl border border-white/5 bg-white/5 card-hover">
-                    <div class="text-2xl mb-3">🏗️</div>
-                    <h3 class="font-bold text-emerald-400">Commissioning Leadership</h3>
-                    <p class="text-sm text-slate-400 mt-2 leading-relaxed">Delivered end-to-end commissioning for the Lower Fars Heavy Oil Program, coordinating across 23 buildings and 8 disciplines.</p>
-                </div>
-                <div class="p-6 rounded-2xl border border-white/5 bg-white/5 card-hover">
-                    <div class="text-2xl mb-3">🤖</div>
-                    <h3 class="font-bold text-blue-400">AI &amp; Digital Innovation</h3>
-                    <p class="text-sm text-slate-400 mt-2 leading-relaxed">Pioneering AI-assisted documentation and Power BI analytics to reduce review prep time and optimize material reliability.</p>
-                </div>
-                <div class="p-6 rounded-2xl border border-white/5 bg-white/5 card-hover">
-                    <div class="text-2xl mb-3">⚙️</div>
-                    <h3 class="font-bold text-emerald-400">MEP &amp; HVAC Systems</h3>
-                    <p class="text-sm text-slate-400 mt-2 leading-relaxed">Managed complex mechanical, electrical, and plumbing operations ensuring reliability and compliance in high-stakes environments.</p>
-                </div>
-                <div class="p-6 rounded-2xl border border-white/5 bg-white/5 card-hover">
-                    <div class="text-2xl mb-3">🌍</div>
-                    <h3 class="font-bold text-blue-400">Global Delivery</h3>
-                    <p class="text-sm text-slate-400 mt-2 leading-relaxed">Executed 18+ international projects, adapting to diverse standards, teams, and demanding operational conditions.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- EXPERIENCE TIMELINE -->
-        <section class="glass p-8 md:p-10 rounded-[2.5rem] reveal">
-            <div class="flex items-center gap-3 mb-10">
-                <div class="h-8 w-1
+  <!-- HERO -->
+  <header class="hero glass reveal">
+    <div class="hero-left">
+      <div class="badge"><span class="ping"><span></span><span></span></span> Available for Strategic Leadership Roles</div>
+      <h1>Engineering <span class="gradient-text">Excellence</span><br>Beyond 21 Years.</h1>
+      <p class="subtitle"><b>Zaldy L. Bernabe, B
