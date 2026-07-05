@@ -1,9 +1,10 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Zaldy L. Bernabe, BSME — Senior Commissioning Engineer specializing in MEP, Oil & Gas, and HVAC with 21+ years of global experience.">
+<meta name="description" content="Zaldy L. Bernabe, BSME — Senior Commissioning Engineer specializing in MEP, Oil & Gas, and HVAC with 21+ years of global experience across KOC and ARAMCO projects.">
 <title>Zaldy L. Bernabe - BSME | Senior Commissioning Engineer</title>
 <style>
 body {
@@ -15,9 +16,10 @@ body {
   background: linear-gradient(135deg, #f0f2f5 0%, #e0e5ec 100%);
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   min-height: 100vh;
 }
+
 .container {
   max-width: 960px;
   margin: 20px auto;
@@ -29,16 +31,20 @@ body {
   width: 100%;
   box-sizing: border-box;
 }
+
 /* Typography */
 h1 { color: #004080; text-align: center; margin-bottom: 10px; font-size: 3rem; line-height: 1.1; }
-h2 { color: #0056b3; text-align: center; margin-top: 0; margin-bottom: 30px; font-size: 1.5rem; font-weight: 400; }
+h2 { color: #0056b3; text-align: center; margin-top: 0; margin-bottom: 20px; font-size: 1.35rem; font-weight: 400; line-height: 1.4; }
 h3 { color: #28a745; border-bottom: 3px solid #28a745; padding-bottom: 10px; margin-top: 40px; margin-bottom: 20px; font-size: 1.4rem; font-weight: 700; }
 p { margin-bottom: 16px; font-size: 1.05rem; }
+
 .highlight { font-weight: bold; color: #007bff; }
+
 /* Contact & Button */
 .contact-info { text-align: center; margin-bottom: 25px; font-size: 1.05rem; }
 .contact-info a { color: #007bff; text-decoration: none; }
 .contact-info a:hover { text-decoration: underline; }
+
 .cta-button-wrapper { text-align: center; margin: 30px 0; }
 .btn-primary {
   display: inline-block;
@@ -56,10 +62,11 @@ p { margin-bottom: 16px; font-size: 1.05rem; }
   transform: translateY(-2px);
   box-shadow: 0 6px 18px rgba(0, 91, 179, 0.35);
 }
+
 /* Skills Grid */
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 20px;
   margin-top: 20px;
 }
@@ -69,6 +76,8 @@ p { margin-bottom: 16px; font-size: 1.05rem; }
   border-radius: 10px;
   border: 1px solid #cceeff;
 }
+.skill-category strong { color: #0056b3; display: block; margin-bottom: 6px; }
+
 /* Experience */
 .experience-item {
   border-left: 5px solid #007bff;
@@ -78,22 +87,31 @@ p { margin-bottom: 16px; font-size: 1.05rem; }
   border: 1px solid #eee;
   border-radius: 8px;
 }
+.experience-item .role { font-weight: 700; color: #004080; font-size: 1.1rem; }
+.experience-item .company { color: #0056b3; }
+.experience-item .period { color: #666; font-style: italic; font-size: 0.95rem; }
+.experience-item ul { margin: 12px 0 0; padding-left: 20px; }
+.experience-item li { margin-bottom: 8px; }
+
 /* Lists */
 .achievements-list, .education-list, .memberships-list {
   list-style: none;
   padding: 0;
 }
-.achievements-list li, .education-list li, .memberships-list li {
+.achievements-list li, .education-list list, .education-list li, .memberships-list li {
   padding: 14px 16px;
   margin-bottom: 10px;
   border-radius: 8px;
   background-color: #e6f7ea;
   border-left: 5px solid #28a745;
 }
+
 /* Footer */
 .footer { text-align: center; margin-top: 50px; padding-top: 25px; border-top: 1px solid #e0e0e0; }
 .footer a { color: #007bff; text-decoration: none; }
 .footer a:hover { text-decoration: underline; }
+.footer .tagline { font-style: italic; color: #555; font-size: 0.95rem; }
+
 /* ========== MOBILE AUTOFIT ========== */
 @media (max-width: 768px) {
   .container {
@@ -101,39 +119,48 @@ p { margin-bottom: 16px; font-size: 1.05rem; }
     padding: 20px;
     border-radius: 12px;
   }
-h1 { font-size: 2rem; }
-  h2 { font-size: 1.15rem; margin-bottom: 20px; }
+
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.05rem; margin-bottom: 18px; }
   h3 { font-size: 1.2rem; margin-top: 30px; }
-.skills-grid {
+
+  .skills-grid {
     grid-template-columns: 1fr;
     gap: 15px;
   }
-.btn-primary {
+
+  .btn-primary {
     display: block;
     width: 100%;
     text-align: center;
     padding: 14px;
     font-size: 1rem;
   }
-.contact-info a {
-    display: block;
-    margin: 5px 0;
+
+  .contact-info a {
+    display: inline-block;
+    margin: 3px 0;
   }
-.experience-item {
+
+  .experience-item {
     padding: 15px;
   }
-p, li {
+
+  p, li {
     font-size: 1rem;
   }
 }
+
 @media (max-width: 480px) {
   .container {
     margin: 8px;
     padding: 16px;
   }
-h1 { font-size: 1.75rem; }
-  h2 { font-size: 1rem; }
-.achievements-list li,
+
+  h1 { font-size: 1.6rem; }
+  h2 { font-size: 0.95rem; }
+
+  .achievements-list li,
   .education-list li,
   .memberships-list li {
     padding: 12px;
@@ -144,53 +171,65 @@ h1 { font-size: 1.75rem; }
 </head>
 <body>
 <div class="container">
+
 <!-- HEADER -->
 <h1>ZALDY L. BERNABE, BSME</h1>
-<h2>Senior Commissioning Engineer | MEP &amp; Project Management Professional | Oil &amp; Gas · HVAC · 21+ Yrs | PMP® Candidate</h2>
+<h2>Senior Commissioning Engineer | MEP &amp; Project Management Professional |
+Targeting Project &amp; Commissioning Manager Roles | Oil &amp; Gas · HVAC ·
+21+ Yrs | PMP® Candidate | KOC &amp; ARAMCO Projects</h2>
+
 <p class="contact-info">
-Ahmadi, Kuwait | <a href="tel:+96555064832">+965 55064832</a> | <a href="mailto:bernabezaldy@gmail.com">bernabezaldy@gmail.com</a>
+Ahmadi, Kuwait | <a href="tel:+96555064832">+965 55064832</a> |
+<a href="mailto:bernabezaldy@gmail.com">bernabezaldy@gmail.com</a> |
+<a href="https://linkedin.com/in/zaldybernabe-me" target="_blank" rel="noopener noreferrer">linkedin.com/in/zaldybernabe-me</a>
 </p>
+
 <div class="cta-button-wrapper">
 <a href="https://linkedin.com/in/zaldybernabe-me" target="_blank" rel="noopener noreferrer" class="btn-primary">Connect on LinkedIn</a>
 </div>
+
 <!-- PROFESSIONAL SUMMARY -->
 <h3>Professional Summary</h3>
-<p>A highly seasoned <strong>Senior Mechanical Engineer &amp; MEP Commissioning Specialist</strong> with over <strong>21 years of global engineering experience</strong>, including 18+ years internationally across Kuwait, Saudi Arabia, and Iraq.</p>
+<p>Senior Mechanical Engineer and MEP Commissioning specialist with <strong>21+ years</strong> of total engineering experience — including <strong>18+ years international</strong> across Kuwait, Saudi Arabia, and Iraq, plus 3 years of foundational experience in the Philippines. Proven track record supporting <span class="highlight">Kuwait Oil Company (KOC)</span> and major EPC contractors in HVAC systems, commissioning, QA/QC, project controls, and materials reliability. Skilled in pre-commissioning, TAB, handover documentation, and multidisciplinary site coordination, aligned with KOC and international standards. A consistent performer in demanding, multicultural, safety-critical environments. Currently pursuing <span class="highlight">PMP® certification</span>, targeting senior leadership roles in project management, commissioning, and facilities operations.</p>
+
 <!-- CORE SKILLS -->
 <h3>Core Skills &amp; Technical Expertise</h3>
 <div class="skills-grid">
-  <div class="skill-category"><strong>Project &amp; Construction Management</strong><br>MEP Coordination, Primavera P6, Cost Control</div>
-  <div class="skill-category"><strong>HVAC &amp; Commissioning</strong><br>HVAC Design, Pre-Commissioning, TAB</div>
-  <div class="skill-category"><strong>QA/QC &amp; Compliance</strong><br>ISO, ASME, KOC &amp; Aramco Standards</div>
-  <div class="skill-category"><strong>Digital Tools</strong><br>AutoCAD, Power BI, SAP, AI Tools</div>
+  <div class="skill-category"><strong>Project &amp; Construction Support</strong>MEP Coordination (HVAC, Plumbing, Firefighting, Piping, Electrical), Primavera P6, MS Project, Scheduling, Cost Control, Oil &amp; Gas Facilities</div>
+  <div class="skill-category"><strong>HVAC &amp; Commissioning</strong>HVAC Design, Chiller Plants, Equipment Selection, System Integration, Pre-Commissioning, TAB, Troubleshooting, Performance Optimization</div>
+  <div class="skill-category"><strong>Controls &amp; Automation</strong>BMS, PLC Troubleshooting, System Integration</div>
+  <div class="skill-category"><strong>Procurement &amp; Materials Reliability</strong>SAP, eBEAMS, Vendor Management, Technical Evaluation, Material Submittals, Logistics Coordination</div>
+  <div class="skill-category"><strong>QA/QC &amp; Compliance</strong>Inspection, Documentation, Reliability Engineering, Maintenance Readiness, ISO, ASME, ASTM, NFPA, KOC &amp; Aramco Standards</div>
+  <div class="skill-category"><strong>Digital Tools</strong>AutoCAD 2D/3D, Power BI, AI-Assisted Documentation &amp; Analysis</div>
 </div>
-<!-- ACHIEVEMENTS -->
-<h3>Selected Career Achievements</h3>
-<ul class="achievements-list">
-  <li>Spearheaded full MEP commissioning for the <span class="highlight">KOC Lower Fars Heavy Oil Program</span>.</li>
-  <li>Recipient of the <span class="highlight">Most Productive Accomplishment</span> and <span class="highlight">Honorable Service Award</span>, recognizing technical excellence and dedication.</li>
-</ul>
+
 <!-- EXPERIENCE -->
 <h3>Professional Experience</h3>
+
 <div class="experience-item">
-  <strong>Materials / Gas Reliability Technical Support</strong><br>
-  Gulf Spic (KOC) | 2023 – Present
+  <span class="role">Materials / Gas Reliability Technical Support</span><br>
+  <span class="company">Gulf Spic General Trading &amp; Contracting Co. (supporting KOC)</span><br>
+  <span class="period">Ahmadi, Kuwait | 2023 – Present</span>
+  <ul>
+    <li>Coordinate material approvals, RFQs, and supplier management via SAP/eBEAMS</li>
+    <li>Drive reliability activities including CAT ID/ICMR creation and compliance verification</li>
+    <li>Analyze and compare technical standards to support engineering decisions</li>
+    <li>Enhance process visibility through tracking logs and stakeholder updates</li>
+  </ul>
 </div>
+
 <div class="experience-item">
-  <strong>MEP Commissioning Engineer</strong><br>
-  CCC | Lower Fars Heavy Oil Program | 2019 – 2021
+  <span class="role">Supervisor – Building Maintenance &amp; HVAC</span><br>
+  <span class="company">AlSaif Company | Heavy Oil Project Support Complex – KOC South Ratqa</span><br>
+  <span class="period">Kuwait | 2021 – 2022</span>
+  <ul>
+    <li>Led multidisciplinary maintenance of HVAC, plumbing, firefighting, and electrical systems</li>
+    <li>Optimized HVAC performance and supported PLC troubleshooting</li>
+    <li>Ensured facility reliability and compliance with KOC operational standards</li>
+  </ul>
 </div>
-<!-- EDUCATION -->
-<h3>Education &amp; Certifications</h3>
-<ul class="education-list">
-  <li><strong>BS Mechanical Engineering</strong> — Don Honorio Ventura Technological State University (2005)</li>
-  <li><span class="highlight">PMP® Certification — In Progress</span></li>
-</ul>
-<!-- FOOTER -->
-<div class="footer">
-  <p><strong>Ready to elevate your next project?</strong></p>
-  <p><a href="https://linkedin.com/in/zaldybernabe-me" target="_blank" rel="noopener noreferrer">LinkedIn</a> | <a href="mailto:bernabezaldy@gmail.com">Email</a></p>
-</div>
-</div>
-</body>
-</html>
+
+<div class="experience-item">
+  <span class="role">MEP Commissioning Engineer</span><br>
+  <span class="company">Consolidated Contractors International Company (CCC) | Lower Fars Heavy Oil Program – KOC</span><br>
+  <span class="period">Kuw
